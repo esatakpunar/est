@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components — est</title>
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme');
+      if (t) { document.documentElement.style.colorScheme = t; document.documentElement.setAttribute('data-theme', t); }
+    })();
+  </script>
+  <link rel="stylesheet" href="est.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-sidebar-layout>
+
+  <nav data-topnav>
+    <div class="hstack justify-between w-100">
+      <div class="branding">
+        <button data-sidebar-toggle aria-label="Toggle sidebar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="14" y2="18"/>
+          </svg>
+        </button>
+        <span class="favicon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/>
+            <rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>
+          </svg>
+        </span>
+        <a href="index.html" class="logo-text">est</a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="components.html">Components</a>
+        <a href="usage.html">Usage</a>
+        <es-dropdown>
+          <button popovertarget="nav-more" class="outline small">More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <menu popover id="nav-more">
+            <a href="customizing.html" role="menuitem">Customizing</a>
+            <a href="recipes.html" role="menuitem">Recipes</a>
+            <hr>
+            <a href="https://github.com/esatakpunar/est" role="menuitem" target="_blank" rel="noopener">GitHub</a>
+          </menu>
+        </es-dropdown>
+      </div>
+    </div>
+  </nav>
+
+  <aside data-sidebar class="main-sidebar">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="usage.html">Usage</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="customizing.html">Customizing</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li>
+          <details open>
+            <summary>Components</summary>
+            <ul>
+              <li><a href="#typography">Typography</a></li>
+              <li><a href="#button">Button</a></li>
+              <li><a href="#form">Form</a></li>
+              <li><a href="#card">Card</a></li>
+              <li><a href="#badge">Badge</a></li>
+              <li><a href="#alert">Alert</a></li>
+              <li><a href="#avatar">Avatar</a></li>
+              <li><a href="#accordion">Accordion</a></li>
+              <li><a href="#table">Table</a></li>
+              <li><a href="#tabs">Tabs <sup>WC</sup></a></li>
+              <li><a href="#dialog">Dialog</a></li>
+              <li><a href="#dropdown">Dropdown <sup>WC</sup></a></li>
+              <li><a href="#toast">Toast</a></li>
+              <li><a href="#tooltip">Tooltip</a></li>
+              <li><a href="#progress">Progress</a></li>
+              <li><a href="#spinner">Spinner</a></li>
+              <li><a href="#skeleton">Skeleton</a></li>
+              <li><a href="#sidebar">Sidebar</a></li>
+              <li><a href="#grid">Grid</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+    <footer>
+      <button class="outline small" onclick="toggleTheme()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-light" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+        </svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-dark" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        Toggle theme
+      </button>
+    </footer>
+  </aside>
+
+  <main>
+    <div class="container">
+
+      <div class="page-header">
+        <h1>Components</h1>
+        <p>All components are live. Click "Code" to see the markup. Edit the code — the preview updates in real time.</p>
+      </div>
+
+      <!-- ===== TYPOGRAPHY ===== -->
+      <section id="typography" class="demo-section">
+        <h2>Typography</h2>
+        <p>Semantic HTML elements styled directly. No classes needed.</p>
+        <div class="es-demo">
+          <pre><code><h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+<p>Paragraph text with <strong>bold</strong>, <em>italic</em>, and <a href="#">links</a>. <code>inline code</code> and <mark>marked text</mark>.</p>
+<blockquote>A blockquote with a subtle left border and muted color.</blockquote>
+<pre><code>const x = preformatted + code;</code></pre></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== BUTTON ===== -->
+      <section id="button" class="demo-section">
+        <h2>Button</h2>
+        <p><code>&lt;button&gt;</code> and <code>&lt;a class="button"&gt;</code> are styled automatically. Use <code>data-variant</code> and class modifiers.</p>
+        <div class="es-demo">
+          <pre><code><div class="vstack gap-4">
+  <div class="hstack">
+    <button>Primary</button>
+    <button data-variant="secondary">Secondary</button>
+    <button data-variant="danger">Danger</button>
+    <button disabled>Disabled</button>
+  </div>
+  <div class="hstack">
+    <button class="outline">Outline</button>
+    <button class="outline" data-variant="secondary">Secondary</button>
+    <button class="outline" data-variant="danger">Danger</button>
+  </div>
+  <div class="hstack">
+    <button class="ghost">Ghost</button>
+    <button class="ghost" data-variant="danger">Ghost danger</button>
+  </div>
+  <div class="hstack">
+    <button class="small">Small</button>
+    <button>Default</button>
+    <button class="large">Large</button>
+  </div>
+  <div class="hstack">
+    <menu class="buttons">
+      <li><button class="outline">Left</button></li>
+      <li><button class="outline">Middle</button></li>
+      <li><button class="outline">Right</button></li>
+    </menu>
+  </div>
+</div></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== FORM ===== -->
+      <section id="form" class="demo-section">
+        <h2>Form</h2>
+        <p>All native form elements styled. Checkbox, radio, switch, range, select — no custom classes.</p>
+        <div class="es-demo">
+          <pre><code><div class="vstack" style="max-width:420px">
+  <div data-field>
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Jane Doe">
+  </div>
+  <div data-field>
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="jane@example.com">
+    <span data-hint>We'll never share your email.</span>
+  </div>
+  <div data-field>
+    <label for="bio">Bio</label>
+    <textarea id="bio" placeholder="Tell us about yourself..."></textarea>
+  </div>
+  <div data-field>
+    <label for="role">Role</label>
+    <select id="role">
+      <option>Designer</option>
+      <option>Engineer</option>
+      <option>Product</option>
+    </select>
+  </div>
+  <div class="hstack">
+    <label><input type="checkbox" checked> Agree to terms</label>
+    <label><input type="checkbox" role="switch" checked> Notifications</label>
+  </div>
+  <div class="hstack">
+    <label><input type="radio" name="plan"> Free</label>
+    <label><input type="radio" name="plan" checked> Pro</label>
+    <label><input type="radio" name="plan"> Enterprise</label>
+  </div>
+  <div data-field>
+    <label for="vol">Volume</label>
+    <input type="range" id="vol" min="0" max="100" value="40">
+  </div>
+  <button type="submit">Submit</button>
+</div></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== CARD ===== -->
+      <section id="card" class="demo-section">
+        <h2>Card</h2>
+        <p>Use <code>.card</code> for content containers. Works with or without nested header/footer.</p>
+        <div class="es-demo">
+          <pre><code><div class="row">
+  <div class="col-6">
+    <div class="card">
+      <h4>Simple card</h4>
+      <p>A clean container with a subtle border and generous padding.</p>
+      <button class="small outline">Action</button>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card">
+      <h4>With badge</h4>
+      <p>Cards pair well with other components like badges and avatars.</p>
+      <div class="hstack mt-4">
+        <span class="badge">New</span>
+        <span class="badge" data-variant="success">Active</span>
+      </div>
+    </div>
+  </div>
+</div></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== BADGE ===== -->
+      <section id="badge" class="demo-section">
+        <h2>Badge</h2>
+        <p>Inline status indicators. Use <code>data-variant</code> for semantic colors.</p>
+        <div class="es-demo">
+          <pre><code><div class="hstack">
+  <span class="badge">Default</span>
+  <span class="badge" data-variant="secondary">Secondary</span>
+  <span class="badge" data-variant="success">Success</span>
+  <span class="badge" data-variant="warning">Warning</span>
+  <span class="badge" data-variant="danger">Danger</span>
+  <span class="badge outline">Outline</span>
+</div></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== ALERT ===== -->
+      <section id="alert" class="demo-section">
+        <h2>Alert</h2>
+        <p>Use <code>role="alert"</code> with <code>data-variant</code> for contextual messaging.</p>
+        <div class="es-demo">
+          <pre><code><div class="vstack">
+  <div role="alert">Default alert — neutral information.</div>
+  <div role="alert" data-variant="success">Your changes have been saved successfully.</div>
+  <div role="alert" data-variant="warning">Your trial ends in 3 days. <a href="#">Upgrade now</a>.</div>
+  <div role="alert" data-variant="danger">Failed to save. Please check your connection.</div>
+</div></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== AVATAR ===== -->
+      <section id="avatar" class="demo-section">
+        <h2>Avatar</h2>
+        <p>Use <code>figure[data-variant="avatar"]</code> for user avatars. Group them with <code>role="group"</code>.</p>
+        <div class="es-demo">
+          <pre><code><div class="hstack">
+  <figure data-variant="avatar" class="small">EA</figure>
+  <figure data-variant="avatar">JD</figure>
+  <figure data-variant="avatar" class="large">AB</figure>
+  <figure data-variant="avatar" role="group">
+    <figure data-variant="avatar"><img src="https://i.pravatar.cc/80?img=1" alt="User 1"></figure>
+    <figure data-variant="avatar"><img src="https://i.pravatar.cc/80?img=2" alt="User 2"></figure>
+    <figure data-variant="avatar"><img src="https://i.pravatar.cc/80?img=3" alt="User 3"></figure>
+    <figure data-variant="avatar">+4</figure>
+  </figure>
+</div></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== ACCORDION ===== -->
+      <section id="accordion" class="demo-section">
+        <h2>Accordion</h2>
+        <p>Native <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements. Adjacent items merge borders automatically.</p>
+        <div class="es-demo">
+          <pre><code><details open>
+  <summary>What is est?</summary>
+  <p>est is a minimal, zero-dependency UI library built on semantic HTML. It styles native elements directly without class pollution.</p>
+</details>
+<details>
+  <summary>How do I install it?</summary>
+  <p>Drop two files into your project: <code>est.min.css</code> and <code>est.min.js</code>. Or install via npm: <code>npm install @esatakpunar/est</code>.</p>
+</details>
+<details>
+  <summary>Is dark mode supported?</summary>
+  <p>Yes. Dark mode is automatic via <code>prefers-color-scheme</code>. All CSS custom properties adapt. You can also force a scheme with <code>color-scheme: dark</code> on the root.</p>
+</details></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== TABLE ===== -->
+      <section id="table" class="demo-section">
+        <h2>Table</h2>
+        <p>Native <code>&lt;table&gt;</code> with hover rows. Wrap in <code>.table</code> for horizontal scroll on mobile.</p>
+        <div class="es-demo">
+          <pre><code><div class="table">
+  <table>
+    <thead>
+      <tr><th>Name</th><th>Status</th><th>Role</th><th>Joined</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Jane Doe</td><td><span class="badge" data-variant="success">Active</span></td><td>Admin</td><td>Jan 2024</td></tr>
+      <tr><td>Alex Kim</td><td><span class="badge" data-variant="success">Active</span></td><td>Member</td><td>Mar 2024</td></tr>
+      <tr><td>Sam Lee</td><td><span class="badge" data-variant="warning">Pending</span></td><td>Member</td><td>Jun 2024</td></tr>
+      <tr><td>Chris Park</td><td><span class="badge" data-variant="secondary">Inactive</span></td><td>Member</td><td>Sep 2023</td></tr>
+    </tbody>
+  </table>
+</div></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== TABS ===== -->
+      <section id="tabs" class="demo-section">
+        <h2>Tabs <span class="badge" data-variant="secondary">WC</span></h2>
+        <p>Use the <code>&lt;es-tabs&gt;</code> Web Component. Handles keyboard navigation, ARIA, and focus management.</p>
+        <div class="es-demo">
+          <pre><code><es-tabs>
+  <div role="tablist">
+    <button role="tab">Account</button>
+    <button role="tab">Billing</button>
+    <button role="tab">Security</button>
+  </div>
+  <div role="tabpanel">
+    <h4>Account settings</h4>
+    <p>Manage your profile, username, and preferences here.</p>
+  </div>
+  <div role="tabpanel">
+    <h4>Billing</h4>
+    <p>View your subscription, payment method, and invoices.</p>
+  </div>
+  <div role="tabpanel">
+    <h4>Security</h4>
+    <p>Change your password and enable two-factor authentication.</p>
+  </div>
+</es-tabs></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== DIALOG ===== -->
+      <section id="dialog" class="demo-section">
+        <h2>Dialog</h2>
+        <p>Native <code>&lt;dialog&gt;</code> with fade-up animation and blur backdrop. Use <code>commandfor</code> / <code>showModal()</code> to open.</p>
+        <div class="es-demo">
+          <pre><code><button commandfor="demo-dialog" command="show-modal">Open dialog</button>
+
+<dialog id="demo-dialog">
+  <header>
+    <h3>Confirm action</h3>
+    <p>This action cannot be undone. Are you sure?</p>
+  </header>
+  <div></div>
+  <footer>
+    <button class="outline" commandfor="demo-dialog" command="close">Cancel</button>
+    <button data-variant="danger">Delete</button>
+  </footer>
+</dialog></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== DROPDOWN ===== -->
+      <section id="dropdown" class="demo-section">
+        <h2>Dropdown <span class="badge" data-variant="secondary">WC</span></h2>
+        <p>Use the <code>&lt;es-dropdown&gt;</code> Web Component. Handles viewport-aware positioning and keyboard navigation.</p>
+        <div class="es-demo">
+          <pre><code><div class="hstack">
+  <es-dropdown>
+    <button popovertarget="dd1" class="outline small">
+      Options
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+    </button>
+    <menu popover id="dd1">
+      <button role="menuitem">Edit</button>
+      <button role="menuitem">Duplicate</button>
+      <button role="menuitem">Share</button>
+      <hr>
+      <button role="menuitem" style="color:var(--danger)">Delete</button>
+    </menu>
+  </es-dropdown>
+
+  <es-dropdown>
+    <button popovertarget="dd2">
+      New
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+    </button>
+    <menu popover id="dd2">
+      <button role="menuitem">New file</button>
+      <button role="menuitem">New folder</button>
+      <button role="menuitem">New project</button>
+    </menu>
+  </es-dropdown>
+</div></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== TOAST ===== -->
+      <section id="toast" class="demo-section">
+        <h2>Toast</h2>
+        <p>Call <code>es.toast()</code> from anywhere. Supports variants, placement, and custom duration.</p>
+        <div class="demo-box">
+          <div class="demo-content">
+            <button onclick="es.toast('File saved successfully.')">Default</button>
+            <button onclick="es.toast('Changes saved.', 'Success', { variant: 'success' })" data-variant="secondary">Success</button>
+            <button onclick="es.toast('Check your input.', 'Warning', { variant: 'warning' })" data-variant="secondary">Warning</button>
+            <button onclick="es.toast('Something went wrong.', 'Error', { variant: 'danger' })" data-variant="secondary">Danger</button>
+            <button onclick="es.toast('Bottom toast.', null, { placement: 'bottom-center' })" class="outline">Bottom center</button>
+          </div>
+        </div>
+<pre><code>es.toast('File saved successfully.')
+es.toast('Changes saved.', 'Success', { variant: 'success' })
+es.toast('Check your input.', 'Warning', { variant: 'warning' })
+es.toast('Something went wrong.', 'Error', { variant: 'danger' })
+es.toast('Bottom toast.', null, { placement: 'bottom-center' })</code></pre>
+      </section>
+
+      <!-- ===== TOOLTIP ===== -->
+      <section id="tooltip" class="demo-section">
+        <h2>Tooltip</h2>
+        <p>Add <code>title</code> to any element — est converts it to a styled tooltip. Or use <code>data-tooltip</code> directly. Supports 4 placements.</p>
+        <div class="es-demo">
+          <pre><code><div class="hstack">
+  <button title="This is a tooltip">Hover me (top)</button>
+  <button data-tooltip="Shows below" data-tooltip-placement="bottom">Below</button>
+  <button data-tooltip="Shows on the left" data-tooltip-placement="left">Left</button>
+  <button data-tooltip="Shows on the right" data-tooltip-placement="right">Right</button>
+</div></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== PROGRESS ===== -->
+      <section id="progress" class="demo-section">
+        <h2>Progress &amp; Meter</h2>
+        <p>Native <code>&lt;progress&gt;</code> and <code>&lt;meter&gt;</code> with custom styling. Meter color-codes automatically by value range.</p>
+        <div class="es-demo">
+          <pre><code><div class="vstack" style="max-width:360px">
+  <label>Uploading… <small>65%</small></label>
+  <progress value="65" max="100"></progress>
+
+  <label>Disk usage</label>
+  <meter value="0.4" optimum="0.3" high="0.7"></meter>
+
+  <label>Battery</label>
+  <meter value="0.2" low="0.25" optimum="0.8"></meter>
+</div></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== SPINNER ===== -->
+      <section id="spinner" class="demo-section">
+        <h2>Spinner</h2>
+        <p>Add <code>aria-busy="true"</code> to any element. Use <code>data-spinner</code> for size and overlay variants.</p>
+        <div class="es-demo">
+          <pre><code><div class="hstack">
+  <div aria-busy="true" data-spinner="small"></div>
+  <div aria-busy="true"></div>
+  <div aria-busy="true" data-spinner="large"></div>
+  <button aria-busy="true" disabled>Loading…</button>
+  <div aria-busy="true" data-spinner="overlay" class="card p-4" style="width:160px">
+    <p>Content hidden during load</p>
+  </div>
+</div></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== SKELETON ===== -->
+      <section id="skeleton" class="demo-section">
+        <h2>Skeleton</h2>
+        <p>Use <code>role="status"</code> with class <code>skeleton</code> for loading placeholders. Add <code>.line</code> or <code>.box</code>.</p>
+        <div class="es-demo">
+          <pre><code><div class="card" style="max-width:360px">
+  <div class="hstack mb-4">
+    <div role="status" class="skeleton box" style="width:2.5rem;height:2.5rem;border-radius:9999px"></div>
+    <div class="vstack flex-col" style="flex:1;gap:0.5rem">
+      <div role="status" class="skeleton line" style="width:60%"></div>
+      <div role="status" class="skeleton line" style="width:40%"></div>
+    </div>
+  </div>
+  <div role="status" class="skeleton line"></div>
+  <div role="status" class="skeleton line" style="width:80%"></div>
+  <div role="status" class="skeleton line" style="width:90%"></div>
+</div></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== SIDEBAR ===== -->
+      <section id="sidebar" class="demo-section sidebar-example">
+        <h2>Sidebar layout</h2>
+        <p>Add <code>data-sidebar-layout</code> to <code>&lt;body&gt;</code>. Includes a sticky top nav and a responsive sidebar.</p>
+        <div class="demo-box">
+          <iframe src="sidebar-demo.html" style="width:100%;height:100%;border:0" title="Sidebar demo" loading="lazy"></iframe>
+        </div>
+<pre><code>&lt;body data-sidebar-layout&gt;
+  &lt;nav data-topnav&gt;
+    &lt;button data-sidebar-toggle&gt;☰&lt;/button&gt;
+    &lt;a href="/"&gt;Brand&lt;/a&gt;
+  &lt;/nav&gt;
+  &lt;aside data-sidebar&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#" aria-current="page"&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Analytics&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Settings&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/aside&gt;
+  &lt;main&gt;
+    &lt;!-- page content --&gt;
+  &lt;/main&gt;
+&lt;/body&gt;</code></pre>
+      </section>
+
+      <!-- ===== GRID ===== -->
+      <section id="grid" class="demo-section">
+        <h2>Grid</h2>
+        <p>12-column grid. Use <code>.container</code>, <code>.row</code>, and <code>.col-N</code> classes. Stacks to 4 columns on mobile.</p>
+        <div class="es-demo">
+          <pre><code><div class="demo-grid">
+  <div class="row">
+    <div class="col-4">col-4</div>
+    <div class="col-4">col-4</div>
+    <div class="col-4">col-4</div>
+  </div>
+  <div class="row">
+    <div class="col-3">col-3</div>
+    <div class="col-6">col-6</div>
+    <div class="col-3">col-3</div>
+  </div>
+  <div class="row">
+    <div class="col-8">col-8</div>
+    <div class="col-4">col-4</div>
+  </div>
+  <div class="row">
+    <div class="col-12">col-12</div>
+  </div>
+</div></code></pre>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <span>est — MIT License</span>
+        <a href="https://github.com/esatakpunar/est" target="_blank" rel="noopener">GitHub</a>
+      </footer>
+    </div>
+  </main>
+
+  <script src="est.min.js" defer></script>
+  <script src="main.js"></script>
+</body>
+</html>

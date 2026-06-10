@@ -1,0 +1,5 @@
+dist/
+publish/
+node_modules/
+*.gz
+.DS_Store

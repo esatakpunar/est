@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes — est</title>
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme');
+      if (t) { document.documentElement.style.colorScheme = t; document.documentElement.setAttribute('data-theme', t); }
+    })();
+  </script>
+  <link rel="stylesheet" href="est.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-sidebar-layout>
+
+  <nav data-topnav>
+    <div class="hstack justify-between w-100">
+      <div class="branding">
+        <button data-sidebar-toggle aria-label="Toggle sidebar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="14" y2="18"/>
+          </svg>
+        </button>
+        <span class="favicon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/>
+            <rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>
+          </svg>
+        </span>
+        <a href="index.html" class="logo-text">est</a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="components.html">Components</a>
+        <a href="usage.html">Usage</a>
+        <es-dropdown>
+          <button popovertarget="nav-more" class="outline small">More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <menu popover id="nav-more">
+            <a href="customizing.html" role="menuitem">Customizing</a>
+            <a href="recipes.html" role="menuitem">Recipes</a>
+            <hr>
+            <a href="https://github.com/esatakpunar/est" role="menuitem" target="_blank" rel="noopener">GitHub</a>
+          </menu>
+        </es-dropdown>
+      </div>
+    </div>
+  </nav>
+
+  <aside data-sidebar class="main-sidebar">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="usage.html">Usage</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="customizing.html">Customizing</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+      </ul>
+    </nav>
+    <footer>
+      <button class="outline small" onclick="toggleTheme()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-light" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+        </svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-dark" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        Toggle theme
+      </button>
+    </footer>
+  </aside>
+
+  <main>
+    <div class="container">
+
+      <div class="page-header">
+        <h1>Recipes</h1>
+        <p>Common patterns and combinations built with est components.</p>
+      </div>
+
+      <!-- ===== LOGIN FORM ===== -->
+      <section class="demo-section" id="login">
+        <h2>Login form</h2>
+        <p>A minimal centered login card.</p>
+        <div class="es-demo">
+          <pre><code><div style="max-width:360px;margin:auto">
+  <div class="card">
+    <h3 style="margin:0 0 0.25rem">Sign in</h3>
+    <p class="text-light" style="margin:0 0 1.5rem;font-size:0.875rem">Enter your credentials to continue.</p>
+    <div data-field>
+      <label for="l-email">Email</label>
+      <input type="email" id="l-email" placeholder="you@example.com" autocomplete="email">
+    </div>
+    <div data-field>
+      <label for="l-pass">Password</label>
+      <input type="password" id="l-pass" placeholder="••••••••" autocomplete="current-password">
+    </div>
+    <button style="width:100%;margin-top:0.5rem">Sign in</button>
+    <p class="text-light" style="text-align:center;font-size:0.75rem;margin-top:1rem">
+      No account? <a href="#">Sign up</a>
+    </p>
+  </div>
+</div></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== NOTIFICATION CARD ===== -->
+      <section class="demo-section" id="notification-card">
+        <h2>Notification card</h2>
+        <p>Avatar + text + action in a card layout.</p>
+        <div class="es-demo">
+          <pre><code><div class="card" style="max-width:380px">
+  <div class="hstack justify-between">
+    <div class="hstack gap-2">
+      <figure data-variant="avatar">JD</figure>
+      <div>
+        <strong style="font-size:0.875rem">Jane Doe</strong>
+        <p style="font-size:0.75rem;color:var(--muted-foreground);margin:0">Commented on your post</p>
+      </div>
+    </div>
+    <span class="badge" data-variant="success">New</span>
+  </div>
+  <p style="font-size:0.875rem;margin-top:1rem;color:var(--muted-foreground)">"Great article! Really helpful for understanding the new API changes."</p>
+  <div class="hstack" style="margin-top:1rem">
+    <button class="small">Reply</button>
+    <button class="small outline">Dismiss</button>
+  </div>
+</div></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== CONFIRM DELETE ===== -->
+      <section class="demo-section" id="confirm-delete">
+        <h2>Confirm delete dialog</h2>
+        <p>Destructive action pattern with a warning alert inside a dialog.</p>
+        <div class="es-demo">
+          <pre><code><button data-variant="danger" commandfor="del-dialog" command="show-modal">Delete project</button>
+
+<dialog id="del-dialog">
+  <header>
+    <h4>Delete project</h4>
+    <p>This action is permanent and cannot be undone.</p>
+  </header>
+  <div>
+    <div role="alert" data-variant="danger">
+      All files, members, and history will be permanently removed.
+    </div>
+  </div>
+  <footer>
+    <button class="outline" commandfor="del-dialog" command="close">Cancel</button>
+    <button data-variant="danger">Yes, delete</button>
+  </footer>
+</dialog></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== STATS ROW ===== -->
+      <section class="demo-section" id="stats">
+        <h2>Stats row</h2>
+        <p>KPI cards in a grid.</p>
+        <div class="es-demo">
+          <pre><code><div class="row">
+  <div class="col-3">
+    <div class="card">
+      <p class="text-light" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.5rem">Revenue</p>
+      <strong style="font-size:1.5rem">$48,200</strong>
+      <p style="font-size:0.75rem;color:var(--success);margin:0.25rem 0 0">↑ 12% this month</p>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card">
+      <p class="text-light" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.5rem">Users</p>
+      <strong style="font-size:1.5rem">3,842</strong>
+      <p style="font-size:0.75rem;color:var(--success);margin:0.25rem 0 0">↑ 8% this month</p>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card">
+      <p class="text-light" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.5rem">Churn</p>
+      <strong style="font-size:1.5rem">2.4%</strong>
+      <p style="font-size:0.75rem;color:var(--danger);margin:0.25rem 0 0">↑ 0.3% this month</p>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card">
+      <p class="text-light" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.5rem">Uptime</p>
+      <strong style="font-size:1.5rem">99.9%</strong>
+      <p style="font-size:0.75rem;color:var(--muted-foreground);margin:0.25rem 0 0">Last 30 days</p>
+    </div>
+  </div>
+</div></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== SEARCH INPUT ===== -->
+      <section class="demo-section" id="search">
+        <h2>Input with button group</h2>
+        <p>Use <code>fieldset.group</code> to attach a button to an input.</p>
+        <div class="es-demo">
+          <pre><code><fieldset class="group" style="max-width:400px">
+  <input type="search" placeholder="Search components…" aria-label="Search">
+  <button>Search</button>
+</fieldset></code></pre>
+        </div>
+      </section>
+
+      <!-- ===== LOADING STATE ===== -->
+      <section class="demo-section" id="loading">
+        <h2>Loading states</h2>
+        <p>Combine skeletons and spinners for rich loading UX.</p>
+        <div class="es-demo">
+          <pre><code><div class="row">
+  <div class="col-6">
+    <div class="card">
+      <div class="hstack mb-4">
+        <div role="status" class="skeleton" style="width:2.5rem;height:2.5rem;border-radius:9999px;flex-shrink:0"></div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:0.4rem">
+          <div role="status" class="skeleton line" style="width:55%"></div>
+          <div role="status" class="skeleton line" style="width:35%"></div>
+        </div>
+      </div>
+      <div role="status" class="skeleton line"></div>
+      <div role="status" class="skeleton line" style="width:85%"></div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card" aria-busy="true" data-spinner="overlay" style="min-height:120px">
+      <h4>Processing…</h4>
+      <p class="text-light">This will take a moment.</p>
+    </div>
+  </div>
+</div></code></pre>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <span>est — MIT License</span>
+        <a href="https://github.com/esatakpunar/est" target="_blank" rel="noopener">GitHub</a>
+      </footer>
+    </div>
+  </main>
+
+  <script src="est.min.js" defer></script>
+  <script src="main.js"></script>
+</body>
+</html>

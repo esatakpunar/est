@@ -1,0 +1,63 @@
+@layer components {
+  [role="alert"] {
+    position: relative;
+    display: flex;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-5);
+    background-color: var(--secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+    font-size: var(--text-7);
+
+    &[data-variant] {
+      border: none;
+      padding-inline-start: var(--space-5);
+    }
+
+    &[data-variant]::before {
+      content: "";
+      position: absolute;
+      inset-block: 0;
+      inset-inline-start: 0;
+      width: 3px;
+      border-radius: var(--radius-small) 0 0 var(--radius-small);
+    }
+
+    &[data-variant="error"],
+    &[data-variant="danger"] {
+      color: var(--danger);
+      background-color: light-dark(
+        color-mix(in srgb, var(--danger) 6%, transparent),
+        color-mix(in srgb, var(--danger) 15%, transparent)
+      );
+
+      &::before { background-color: var(--danger); }
+
+      & a { color: var(--danger); }
+    }
+
+    &[data-variant="success"] {
+      color: var(--success);
+      background-color: light-dark(
+        color-mix(in srgb, var(--success) 6%, transparent),
+        color-mix(in srgb, var(--success) 15%, transparent)
+      );
+
+      &::before { background-color: var(--success); }
+
+      & a { color: var(--success); }
+    }
+
+    &[data-variant="warning"] {
+      color: var(--warning);
+      background-color: light-dark(
+        color-mix(in srgb, var(--warning) 6%, transparent),
+        color-mix(in srgb, var(--warning) 15%, transparent)
+      );
+
+      &::before { background-color: var(--warning); }
+
+      & a { color: var(--warning); }
+    }
+  }
+}

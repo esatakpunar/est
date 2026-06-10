@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usage — est</title>
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme');
+      if (t) { document.documentElement.style.colorScheme = t; document.documentElement.setAttribute('data-theme', t); }
+    })();
+  </script>
+  <link rel="stylesheet" href="est.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-sidebar-layout>
+
+  <nav data-topnav>
+    <div class="hstack justify-between w-100">
+      <div class="branding">
+        <button data-sidebar-toggle aria-label="Toggle sidebar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="14" y2="18"/>
+          </svg>
+        </button>
+        <span class="favicon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/>
+            <rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>
+          </svg>
+        </span>
+        <a href="index.html" class="logo-text">est</a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="components.html">Components</a>
+        <a href="usage.html">Usage</a>
+        <es-dropdown>
+          <button popovertarget="nav-more" class="outline small">More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <menu popover id="nav-more">
+            <a href="customizing.html" role="menuitem">Customizing</a>
+            <a href="recipes.html" role="menuitem">Recipes</a>
+            <hr>
+            <a href="https://github.com/esatakpunar/est" role="menuitem" target="_blank" rel="noopener">GitHub</a>
+          </menu>
+        </es-dropdown>
+      </div>
+    </div>
+  </nav>
+
+  <aside data-sidebar class="main-sidebar">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="usage.html">Usage</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="customizing.html">Customizing</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li>
+          <details>
+            <summary>Components</summary>
+            <ul>
+              <li><a href="components.html#typography">Typography</a></li>
+              <li><a href="components.html#button">Button</a></li>
+              <li><a href="components.html#form">Form</a></li>
+              <li><a href="components.html#card">Card</a></li>
+              <li><a href="components.html#badge">Badge</a></li>
+              <li><a href="components.html#alert">Alert</a></li>
+              <li><a href="components.html#avatar">Avatar</a></li>
+              <li><a href="components.html#accordion">Accordion</a></li>
+              <li><a href="components.html#table">Table</a></li>
+              <li><a href="components.html#tabs">Tabs <sup>WC</sup></a></li>
+              <li><a href="components.html#dialog">Dialog</a></li>
+              <li><a href="components.html#dropdown">Dropdown <sup>WC</sup></a></li>
+              <li><a href="components.html#toast">Toast</a></li>
+              <li><a href="components.html#tooltip">Tooltip</a></li>
+              <li><a href="components.html#progress">Progress</a></li>
+              <li><a href="components.html#spinner">Spinner</a></li>
+              <li><a href="components.html#skeleton">Skeleton</a></li>
+              <li><a href="components.html#sidebar">Sidebar</a></li>
+              <li><a href="components.html#grid">Grid</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+    <footer>
+      <button class="outline small" onclick="toggleTheme()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-light" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+        </svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-dark" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        Toggle theme
+      </button>
+    </footer>
+  </aside>
+
+  <main>
+    <div class="container">
+
+      <div class="page-header">
+        <h1>Usage</h1>
+        <p>Get est into your project in under a minute.</p>
+      </div>
+
+      <h2>Installation</h2>
+
+      <h3>npm</h3>
+      <p>Install the package:</p>
+      <div class="install-block">
+        <code>npm install @esatakpunar/est</code>
+        <button class="outline small" onclick="navigator.clipboard.writeText('npm install @esatakpunar/est').then(() => { this.textContent='Copied!'; setTimeout(() => this.textContent='Copy', 2000); })">Copy</button>
+      </div>
+      <p>Reference from <code>node_modules</code>:</p>
+<pre><code>&lt;link rel="stylesheet" href="node_modules/@esatakpunar/est/est.min.css"&gt;
+&lt;script src="node_modules/@esatakpunar/est/est.min.js" defer&gt;&lt;/script&gt;</code></pre>
+
+      <h3>CDN (jsDelivr)</h3>
+      <p>No install needed. Drop these two tags into your <code>&lt;head&gt;</code>:</p>
+<pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@esatakpunar/est/est.min.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/@esatakpunar/est/est.min.js" defer&gt;&lt;/script&gt;</code></pre>
+
+      <h3>Direct download</h3>
+      <p>Download <code>est.min.css</code> and <code>est.min.js</code> from the <a href="https://github.com/esatakpunar/est/releases" target="_blank" rel="noopener">releases page</a> and host them yourself.</p>
+
+      <hr>
+
+      <h2>Minimal HTML</h2>
+      <p>A complete page using est:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;My app&lt;/title&gt;
+  &lt;link rel="stylesheet" href="est.min.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;main&gt;
+    &lt;h1&gt;Hello world&lt;/h1&gt;
+    &lt;p&gt;Styled out of the box.&lt;/p&gt;
+    &lt;button&gt;Click me&lt;/button&gt;
+  &lt;/main&gt;
+  &lt;script src="est.min.js" defer&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      <hr>
+
+      <h2>JavaScript API</h2>
+      <p>Interactive components register as Web Components (<code>es-tabs</code>, <code>es-dropdown</code>) and expose a global <code>es.*</code> API:</p>
+
+      <h3>Toast</h3>
+<pre><code>// Simple message
+es.toast('File saved.')
+
+// With title and variant
+es.toast('Your changes have been saved.', 'Success', { variant: 'success' })
+es.toast('Something went wrong.', 'Error', { variant: 'danger' })
+es.toast('Check your input.', 'Warning', { variant: 'warning' })
+
+// Placement options: 'top-right' (default), 'top-left', 'top-center',
+//                   'bottom-right', 'bottom-left', 'bottom-center'
+es.toast('Bottom toast', 'Note', { placement: 'bottom-center' })
+
+// Duration in ms (0 = persist until dismissed)
+es.toast('Persists until closed.', null, { duration: 0 })
+
+// Custom element
+es.toast.el(document.querySelector('#my-template'))
+
+// Clear all toasts
+es.toast.clear()</code></pre>
+
+      <h3>Tabs</h3>
+<pre><code>&lt;es-tabs&gt;
+  &lt;div role="tablist"&gt;
+    &lt;button role="tab"&gt;Tab 1&lt;/button&gt;
+    &lt;button role="tab"&gt;Tab 2&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div role="tabpanel"&gt;Content 1&lt;/div&gt;
+  &lt;div role="tabpanel"&gt;Content 2&lt;/div&gt;
+&lt;/es-tabs&gt;
+
+&lt;script&gt;
+// Programmatic control
+const tabs = document.querySelector('es-tabs');
+tabs.activeIndex = 1;
+
+// Events
+tabs.addEventListener('es-tab-change', e => {
+  console.log('Active tab:', e.detail.index);
+});
+&lt;/script&gt;</code></pre>
+
+      <h3>Dropdown</h3>
+<pre><code>&lt;es-dropdown&gt;
+  &lt;button popovertarget="my-menu"&gt;Options&lt;/button&gt;
+  &lt;menu popover id="my-menu"&gt;
+    &lt;button role="menuitem"&gt;Edit&lt;/button&gt;
+    &lt;button role="menuitem"&gt;Duplicate&lt;/button&gt;
+    &lt;hr&gt;
+    &lt;button role="menuitem" data-variant="danger"&gt;Delete&lt;/button&gt;
+  &lt;/menu&gt;
+&lt;/es-dropdown&gt;</code></pre>
+
+      <hr>
+
+      <h2>Dark mode</h2>
+      <p>Dark mode is automatic via <code>prefers-color-scheme</code>. To force a specific scheme:</p>
+<pre><code>&lt;!-- Force dark --&gt;
+&lt;html style="color-scheme: dark"&gt;
+
+&lt;!-- Force light --&gt;
+&lt;html style="color-scheme: light"&gt;
+
+&lt;!-- Toggle with JS --&gt;
+&lt;script&gt;
+function toggleTheme() {
+  const isDark = document.documentElement.style.colorScheme === 'dark';
+  document.documentElement.style.colorScheme = isDark ? 'light' : 'dark';
+}
+&lt;/script&gt;</code></pre>
+
+      <footer class="site-footer">
+        <span>est — MIT License</span>
+        <a href="https://github.com/esatakpunar/est" target="_blank" rel="noopener">GitHub</a>
+      </footer>
+    </div>
+  </main>
+
+  <script src="est.min.js" defer></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "@esatakpunar/est",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Esat Akpunar",
+  "description": "Ultra-lightweight, zero dependency, semantic HTML/CSS/JS UI library — minimalist design with soft purple accent",
+  "homepage": "https://esatakpunar.github.io/est",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esatakpunar/est.git"
+  },
+  "keywords": ["ui", "components", "component-library", "minimalist", "semantic", "css", "zero-dependency"],
+  "files": [
+    "est.min.css",
+    "est.min.js",
+    "css",
+    "js"
+  ],
+  "main": "est.min.js",
+  "style": "est.min.css"
+}

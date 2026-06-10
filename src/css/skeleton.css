@@ -1,0 +1,37 @@
+@layer components {
+  [role="status"].skeleton {
+    --_c: light-dark(#f0f0f0, #2a2a2a);
+    --_base: light-dark(#e8e8e8, #1f1f1f);
+
+    margin-block-end: var(--space-3);
+    background: var(--_base);
+    border-radius: var(--radius-medium);
+    animation: anim 1.8s ease-in-out infinite;
+    background-size: 200% 100%;
+    background-image: linear-gradient(
+      90deg,
+      var(--_base) 0%,
+      var(--_c) 50%,
+      var(--_base) 100%
+    );
+
+    &.box {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    &.line {
+      height: 0.875rem;
+      width: 100%;
+    }
+  }
+
+  [role="status"].skeleton:last-child {
+    margin-block-end: 0;
+  }
+
+  @keyframes anim {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
+  }
+}

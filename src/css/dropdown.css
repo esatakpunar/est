@@ -1,0 +1,60 @@
+@layer components {
+  es-dropdown {
+    [popover] {
+      position: fixed;
+      margin: 0;
+      min-width: 12rem;
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-medium);
+      box-shadow: var(--shadow-medium);
+      padding: var(--space-1);
+      opacity: 0;
+      transform: translateY(-6px) scale(0.98);
+      transition:
+        opacity 150ms cubic-bezier(0.25, 0, 0, 1),
+        transform 150ms cubic-bezier(0.25, 0, 0, 1),
+        display 150ms allow-discrete,
+        overlay 150ms allow-discrete;
+
+      &:popover-open {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      @starting-style {
+        &:popover-open {
+          opacity: 0;
+          transform: translateY(-6px) scale(0.98);
+        }
+      }
+
+      hr {
+        margin: var(--space-1) 0;
+        border: none;
+        border-top: 1px solid var(--border);
+      }
+    }
+
+    [role="menuitem"] {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: var(--space-2);
+      width: 100%;
+      padding: var(--space-2) var(--space-3);
+      font-size: var(--text-7);
+      text-align: start;
+      color: var(--foreground);
+      background: none;
+      border: none;
+      border-radius: calc(var(--radius-medium) - 2px);
+      cursor: pointer;
+
+      &:hover, &:focus {
+        background-color: var(--secondary);
+        outline: none;
+      }
+    }
+  }
+}
