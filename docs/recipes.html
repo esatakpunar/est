@@ -86,24 +86,24 @@
         <h2>Login form</h2>
         <p>A minimal centered login card.</p>
         <div class="es-demo">
-          <pre><code><div style="max-width:360px;margin:auto">
-  <div class="card">
-    <h3 style="margin:0 0 0.25rem">Sign in</h3>
-    <p class="text-light" style="margin:0 0 1.5rem;font-size:0.875rem">Enter your credentials to continue.</p>
-    <div data-field>
-      <label for="l-email">Email</label>
-      <input type="email" id="l-email" placeholder="you@example.com" autocomplete="email">
-    </div>
-    <div data-field>
-      <label for="l-pass">Password</label>
-      <input type="password" id="l-pass" placeholder="••••••••" autocomplete="current-password">
-    </div>
-    <button style="width:100%;margin-top:0.5rem">Sign in</button>
-    <p class="text-light" style="text-align:center;font-size:0.75rem;margin-top:1rem">
-      No account? <a href="#">Sign up</a>
-    </p>
-  </div>
-</div></code></pre>
+          <pre><code>&lt;div style="max-width:360px;margin:auto"&gt;
+  &lt;div class="card"&gt;
+    &lt;h3 style="margin:0 0 0.25rem"&gt;Sign in&lt;/h3&gt;
+    &lt;p class="text-light" style="margin:0 0 1.5rem;font-size:0.875rem"&gt;Enter your credentials to continue.&lt;/p&gt;
+    &lt;div data-field&gt;
+      &lt;label for="l-email"&gt;Email&lt;/label&gt;
+      &lt;input type="email" id="l-email" placeholder="you@example.com" autocomplete="email"&gt;
+    &lt;/div&gt;
+    &lt;div data-field&gt;
+      &lt;label for="l-pass"&gt;Password&lt;/label&gt;
+      &lt;input type="password" id="l-pass" placeholder="••••••••" autocomplete="current-password"&gt;
+    &lt;/div&gt;
+    &lt;button style="width:100%;margin-top:0.5rem"&gt;Sign in&lt;/button&gt;
+    &lt;p class="text-light" style="text-align:center;font-size:0.75rem;margin-top:1rem"&gt;
+      No account? &lt;a href="#"&gt;Sign up&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
         </div>
       </section>
 
@@ -112,23 +112,23 @@
         <h2>Notification card</h2>
         <p>Avatar + text + action in a card layout.</p>
         <div class="es-demo">
-          <pre><code><div class="card" style="max-width:380px">
-  <div class="hstack justify-between">
-    <div class="hstack gap-2">
-      <figure data-variant="avatar">JD</figure>
-      <div>
-        <strong style="font-size:0.875rem">Jane Doe</strong>
-        <p style="font-size:0.75rem;color:var(--muted-foreground);margin:0">Commented on your post</p>
-      </div>
-    </div>
-    <span class="badge" data-variant="success">New</span>
-  </div>
-  <p style="font-size:0.875rem;margin-top:1rem;color:var(--muted-foreground)">"Great article! Really helpful for understanding the new API changes."</p>
-  <div class="hstack" style="margin-top:1rem">
-    <button class="small">Reply</button>
-    <button class="small outline">Dismiss</button>
-  </div>
-</div></code></pre>
+          <pre><code>&lt;div class="card" style="max-width:380px"&gt;
+  &lt;div class="hstack justify-between"&gt;
+    &lt;div class="hstack gap-2"&gt;
+      &lt;figure data-variant="avatar"&gt;JD&lt;/figure&gt;
+      &lt;div&gt;
+        &lt;strong style="font-size:0.875rem"&gt;Jane Doe&lt;/strong&gt;
+        &lt;p style="font-size:0.75rem;color:var(--muted-foreground);margin:0"&gt;Commented on your post&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span class="badge" data-variant="success"&gt;New&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;p style="font-size:0.875rem;margin-top:1rem;color:var(--muted-foreground)"&gt;"Great article! Really helpful for understanding the new API changes."&lt;/p&gt;
+  &lt;div class="hstack" style="margin-top:1rem"&gt;
+    &lt;button class="small"&gt;Reply&lt;/button&gt;
+    &lt;button class="small outline"&gt;Dismiss&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
         </div>
       </section>
 
@@ -137,23 +137,23 @@
         <h2>Confirm delete dialog</h2>
         <p>Destructive action pattern with a warning alert inside a dialog.</p>
         <div class="es-demo">
-          <pre><code><button data-variant="danger" commandfor="del-dialog" command="show-modal">Delete project</button>
+          <pre><code>&lt;button data-variant="danger" commandfor="del-dialog" command="show-modal"&gt;Delete project&lt;/button&gt;
 
-<dialog id="del-dialog">
-  <header>
-    <h4>Delete project</h4>
-    <p>This action is permanent and cannot be undone.</p>
-  </header>
-  <div>
-    <div role="alert" data-variant="danger">
+&lt;dialog id="del-dialog"&gt;
+  &lt;header&gt;
+    &lt;h4&gt;Delete project&lt;/h4&gt;
+    &lt;p&gt;This action is permanent and cannot be undone.&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;div&gt;
+    &lt;div role="alert" data-variant="danger"&gt;
       All files, members, and history will be permanently removed.
-    </div>
-  </div>
-  <footer>
-    <button class="outline" commandfor="del-dialog" command="close">Cancel</button>
-    <button data-variant="danger">Yes, delete</button>
-  </footer>
-</dialog></code></pre>
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;footer&gt;
+    &lt;button class="outline" commandfor="del-dialog" command="close"&gt;Cancel&lt;/button&gt;
+    &lt;button data-variant="danger"&gt;Yes, delete&lt;/button&gt;
+  &lt;/footer&gt;
+&lt;/dialog&gt;</code></pre>
         </div>
       </section>
 
@@ -162,36 +162,36 @@
         <h2>Stats row</h2>
         <p>KPI cards in a grid.</p>
         <div class="es-demo">
-          <pre><code><div class="row">
-  <div class="col-3">
-    <div class="card">
-      <p class="text-light" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.5rem">Revenue</p>
-      <strong style="font-size:1.5rem">$48,200</strong>
-      <p style="font-size:0.75rem;color:var(--success);margin:0.25rem 0 0">↑ 12% this month</p>
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="card">
-      <p class="text-light" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.5rem">Users</p>
-      <strong style="font-size:1.5rem">3,842</strong>
-      <p style="font-size:0.75rem;color:var(--success);margin:0.25rem 0 0">↑ 8% this month</p>
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="card">
-      <p class="text-light" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.5rem">Churn</p>
-      <strong style="font-size:1.5rem">2.4%</strong>
-      <p style="font-size:0.75rem;color:var(--danger);margin:0.25rem 0 0">↑ 0.3% this month</p>
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="card">
-      <p class="text-light" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.5rem">Uptime</p>
-      <strong style="font-size:1.5rem">99.9%</strong>
-      <p style="font-size:0.75rem;color:var(--muted-foreground);margin:0.25rem 0 0">Last 30 days</p>
-    </div>
-  </div>
-</div></code></pre>
+          <pre><code>&lt;div class="row"&gt;
+  &lt;div class="col-3"&gt;
+    &lt;div class="card"&gt;
+      &lt;p class="text-light" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.5rem"&gt;Revenue&lt;/p&gt;
+      &lt;strong style="font-size:1.5rem"&gt;$48,200&lt;/strong&gt;
+      &lt;p style="font-size:0.75rem;color:var(--success);margin:0.25rem 0 0"&gt;↑ 12% this month&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-3"&gt;
+    &lt;div class="card"&gt;
+      &lt;p class="text-light" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.5rem"&gt;Users&lt;/p&gt;
+      &lt;strong style="font-size:1.5rem"&gt;3,842&lt;/strong&gt;
+      &lt;p style="font-size:0.75rem;color:var(--success);margin:0.25rem 0 0"&gt;↑ 8% this month&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-3"&gt;
+    &lt;div class="card"&gt;
+      &lt;p class="text-light" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.5rem"&gt;Churn&lt;/p&gt;
+      &lt;strong style="font-size:1.5rem"&gt;2.4%&lt;/strong&gt;
+      &lt;p style="font-size:0.75rem;color:var(--danger);margin:0.25rem 0 0"&gt;↑ 0.3% this month&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-3"&gt;
+    &lt;div class="card"&gt;
+      &lt;p class="text-light" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.5rem"&gt;Uptime&lt;/p&gt;
+      &lt;strong style="font-size:1.5rem"&gt;99.9%&lt;/strong&gt;
+      &lt;p style="font-size:0.75rem;color:var(--muted-foreground);margin:0.25rem 0 0"&gt;Last 30 days&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
         </div>
       </section>
 
@@ -200,10 +200,10 @@
         <h2>Input with button group</h2>
         <p>Use <code>fieldset.group</code> to attach a button to an input.</p>
         <div class="es-demo">
-          <pre><code><fieldset class="group" style="max-width:400px">
-  <input type="search" placeholder="Search components…" aria-label="Search">
-  <button>Search</button>
-</fieldset></code></pre>
+          <pre><code>&lt;fieldset class="group" style="max-width:400px"&gt;
+  &lt;input type="search" placeholder="Search components…" aria-label="Search"&gt;
+  &lt;button&gt;Search&lt;/button&gt;
+&lt;/fieldset&gt;</code></pre>
         </div>
       </section>
 
@@ -212,27 +212,27 @@
         <h2>Loading states</h2>
         <p>Combine skeletons and spinners for rich loading UX.</p>
         <div class="es-demo">
-          <pre><code><div class="row">
-  <div class="col-6">
-    <div class="card">
-      <div class="hstack mb-4">
-        <div role="status" class="skeleton" style="width:2.5rem;height:2.5rem;border-radius:9999px;flex-shrink:0"></div>
-        <div style="flex:1;display:flex;flex-direction:column;gap:0.4rem">
-          <div role="status" class="skeleton line" style="width:55%"></div>
-          <div role="status" class="skeleton line" style="width:35%"></div>
-        </div>
-      </div>
-      <div role="status" class="skeleton line"></div>
-      <div role="status" class="skeleton line" style="width:85%"></div>
-    </div>
-  </div>
-  <div class="col-6">
-    <div class="card" aria-busy="true" data-spinner="overlay" style="min-height:120px">
-      <h4>Processing…</h4>
-      <p class="text-light">This will take a moment.</p>
-    </div>
-  </div>
-</div></code></pre>
+          <pre><code>&lt;div class="row"&gt;
+  &lt;div class="col-6"&gt;
+    &lt;div class="card"&gt;
+      &lt;div class="hstack mb-4"&gt;
+        &lt;div role="status" class="skeleton" style="width:2.5rem;height:2.5rem;border-radius:9999px;flex-shrink:0"&gt;&lt;/div&gt;
+        &lt;div style="flex:1;display:flex;flex-direction:column;gap:0.4rem"&gt;
+          &lt;div role="status" class="skeleton line" style="width:55%"&gt;&lt;/div&gt;
+          &lt;div role="status" class="skeleton line" style="width:35%"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div role="status" class="skeleton line"&gt;&lt;/div&gt;
+      &lt;div role="status" class="skeleton line" style="width:85%"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-6"&gt;
+    &lt;div class="card" aria-busy="true" data-spinner="overlay" style="min-height:120px"&gt;
+      &lt;h4&gt;Processing…&lt;/h4&gt;
+      &lt;p class="text-light"&gt;This will take a moment.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
         </div>
       </section>
 
