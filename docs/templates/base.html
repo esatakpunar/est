@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}{{ config.title }}{% endblock %}</title>
 
-  <meta property="og:image" content="https://esatakpunar.github.io/est/thumb.png">
-  <link rel="stylesheet" href="/est.min.css">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:image" content="{{ config.base_url }}/thumb.png">
+  <link rel="stylesheet" href="{{ get_url(path='est.min.css') }}">
+  <link rel="icon" href="{{ get_url(path='favicon.svg') }}" type="image/svg+xml" />
 
   <script>
     (function() {
@@ -19,9 +19,9 @@
       }
     })();
   </script>
-  <script src="/est.min.js" defer></script>
-  <script src="/main.js"></script>
-  <link href="/style.css" rel="stylesheet" />
+  <script src="{{ get_url(path='est.min.js') }}" defer></script>
+  <script src="{{ get_url(path='main.js') }}"></script>
+  <link href="{{ get_url(path='style.css') }}" rel="stylesheet" />
 </head>
 
 <body data-sidebar-layout class="{% if current_path == '/' %}home{% else %}{{ current_path | slugify }}{% endif %}">
@@ -34,7 +34,7 @@
           </svg>
         </button>
         <span class="favicon">
-          <a href="/">
+          <a href="{{ get_url(path='/') }}">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
               <rect x="3" y="3" width="7" height="7" rx="1.5"/>
               <rect x="14" y="3" width="7" height="7" rx="1.5"/>
@@ -43,22 +43,22 @@
             </svg>
           </a>
         </span>
-        <a href="/" class="logo-text">est</a>
+        <a href="{{ get_url(path='/') }}" class="logo-text">est</a>
       </div>
 
       <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/demo/">Demo</a>
-        <a href="/components/">Components</a>
-        <a href="/usage/">Usage</a>
+        <a href="{{ get_url(path='/') }}">Home</a>
+        <a href="{{ get_url(path='/demo/') }}">Demo</a>
+        <a href="{{ get_url(path='/components/') }}">Components</a>
+        <a href="{{ get_url(path='/usage/') }}">Usage</a>
         <es-dropdown>
           <button popovertarget="nav-menu" class="outline small">
             More
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
           </button>
           <menu popover id="nav-menu">
-            <a href="/customizing/" role="menuitem">Customizing</a>
-            <a href="/recipes/" role="menuitem">Recipes</a>
+            <a href="{{ get_url(path='/customizing/') }}" role="menuitem">Customizing</a>
+            <a href="{{ get_url(path='/recipes/') }}" role="menuitem">Recipes</a>
             <hr>
             <a href="https://github.com/esatakpunar/est" role="menuitem" target="_blank" rel="noopener">GitHub</a>
           </menu>
@@ -71,11 +71,11 @@
     <nav>
       <ul>
         <li><a href="https://github.com/esatakpunar/est" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="/">Home</a></li>
-        <li><a href="/demo/">Demo</a></li>
-        <li><a href="/usage/">Usage</a></li>
-        <li><a href="/customizing/">Customizing</a></li>
-        <li><a href="/recipes/">Recipes</a></li>
+        <li><a href="{{ get_url(path='/') }}">Home</a></li>
+        <li><a href="{{ get_url(path='/demo/') }}">Demo</a></li>
+        <li><a href="{{ get_url(path='/usage/') }}">Usage</a></li>
+        <li><a href="{{ get_url(path='/customizing/') }}">Customizing</a></li>
+        <li><a href="{{ get_url(path='/recipes/') }}">Recipes</a></li>
         <li>
           <details open>
             <summary>
@@ -88,10 +88,10 @@
               Components
             </summary>
             <ul>
-              <li><a href="/components/">All components</a></li>
+              <li><a href="{{ get_url(path='/components/') }}">All components</a></li>
               {% set components = get_section(path="components/_index.md") %}
               {% for component in components.pages %}
-              <li><a href="/components/#{{ component.slug }}">{{ component.title }}
+              <li><a href="{{ get_url(path='/components/') }}#{{ component.slug }}">{{ component.title }}
                 {% if component.extra.webcomponent | default(value=false) %}<sup title="WebComponent">WC</sup>{% endif %}</a></li>
               {% endfor %}
             </ul>
