@@ -1,3 +1,15 @@
-<div class="es-demo" data-iframe="{{ get_url(path='sidebar-demo.html') }}">
-{{ body | markdown | safe }}
+<div class="es-iframe-demo">
+  <div class="demo-tabbar">
+    <button class="demo-tab active">Preview</button>
+    <button class="demo-tab">Code</button>
+    <button class="demo-copy ghost small">Copy</button>
+  </div>
+  <div class="demo-preview">
+    <div class="demo-box" style="position:relative;height:280px;padding:0;overflow:hidden">
+      <iframe src="{{ get_url(path='sidebar-demo.html') }}" style="width:100%;height:100%;border:0" title="Sidebar demo" loading="lazy"></iframe>
+    </div>
+  </div>
+  <div class="demo-code-panel" style="display:none">
+    {{ body | markdown | safe }}
+  </div>
 </div>
