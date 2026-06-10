@@ -10,7 +10,71 @@ document.addEventListener('DOMContentLoaded', () => {
   // For each .es-demo, read the <pre><code> content, build a Preview/Code
   // tab UI without depending on es-tabs (so nested components work cleanly).
 
-  document.querySelectorAll('.es-demo').forEach(demo => {
+  // Iframe-based demos (e.g. sidebar): use data-iframe URL as preview.
+  document.querySelectorAll('.es-demo[data-iframe]').forEach(demo => {
+    const pre = demo.querySelector('pre');
+    if (!pre) return;
+
+    const iframeUrl = demo.dataset.iframe;
+
+    const tabbar = document.createElement('div');
+    tabbar.className = 'demo-tabbar';
+
+    const previewBtn = document.createElement('button');
+    previewBtn.className = 'demo-tab active';
+    previewBtn.textContent = 'Preview';
+
+    const codeBtn = document.createElement('button');
+    codeBtn.className = 'demo-tab';
+    codeBtn.textContent = 'Code';
+
+    const copyBtn = document.createElement('button');
+    copyBtn.className = 'demo-copy ghost small';
+    copyBtn.textContent = 'Copy';
+
+    tabbar.appendChild(previewBtn);
+    tabbar.appendChild(codeBtn);
+    tabbar.appendChild(copyBtn);
+
+    const previewPanel = document.createElement('div');
+    previewPanel.className = 'demo-preview';
+    const demoBox = document.createElement('div');
+    demoBox.className = 'demo-box';
+    demoBox.style.cssText = 'position:relative;height:280px;padding:0;overflow:hidden';
+    const iframe = document.createElement('iframe');
+    iframe.src = iframeUrl;
+    iframe.style.cssText = 'width:100%;height:100%;border:0';
+    iframe.title = 'Sidebar demo';
+    iframe.loading = 'lazy';
+    demoBox.appendChild(iframe);
+    previewPanel.appendChild(demoBox);
+
+    demo.innerHTML = '';
+    demo.appendChild(tabbar);
+    demo.appendChild(previewPanel);
+    demo.appendChild(pre);
+    pre.classList.add('demo-code-block');
+    pre.style.display = 'none';
+
+    previewBtn.addEventListener('click', () => {
+      previewBtn.classList.add('active'); codeBtn.classList.remove('active');
+      previewPanel.style.display = ''; pre.style.display = 'none';
+    });
+    codeBtn.addEventListener('click', () => {
+      codeBtn.classList.add('active'); previewBtn.classList.remove('active');
+      previewPanel.style.display = 'none'; pre.style.display = 'block';
+    });
+
+    const code = pre.querySelector('code');
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText((code || pre).textContent.trim()).then(() => {
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => copyBtn.textContent = 'Copy', 2000);
+      });
+    });
+  });
+
+  document.querySelectorAll('.es-demo:not([data-iframe])').forEach(demo => {
     const pre = demo.querySelector('pre');
     if (!pre) return;
 

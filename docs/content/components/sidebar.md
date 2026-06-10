@@ -6,8 +6,7 @@ description = "Responsive sidebar layout with sticky top nav"
 
 Add `data-sidebar-layout` to `<body>`. Includes a sticky top nav and a responsive sidebar.
 
-{{ sidebar_demo() }}
-
+{% sidebar_demo() %}
 ```html
 <body data-sidebar-layout>
   <nav data-topnav>
@@ -28,3 +27,4 @@ Add `data-sidebar-layout` to `<body>`. Includes a sticky top nav and a responsiv
   </main>
 </body>
 ```
+{% end %}
