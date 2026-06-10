@@ -1,5 +1,6 @@
 dist/
 publish/
 node_modules/
+docs/public/
 *.gz
 .DS_Store
