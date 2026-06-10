@@ -375,3 +375,44 @@ html:not([data-theme="dark"]) .icon-dark { display: none; }
   .features { grid-template-columns: 1fr; }
   nav[data-topnav] .nav-links { display: none; }
 }
+
+/* ===== DEMO PAGE ===== */
+.section {
+  margin-bottom: var(--space-6);
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: var(--font-semibold);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin: var(--space-1) 0;
+}
+
+.faux-bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-2);
+  height: 120px;
+  padding: var(--space-4) 0 var(--space-2);
+}
+
+.faux-bar {
+  flex: 1;
+  background: var(--primary);
+  border-radius: var(--radius-small) var(--radius-small) 0 0;
+  opacity: 0.75;
+  transition: opacity var(--transition-fast);
+  cursor: default;
+}
+
+.faux-bar:hover { opacity: 1; }
+
+.activity-item {
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.activity-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+.text-lighter { color: var(--muted-foreground); font-size: var(--text-8); }
