@@ -111,7 +111,7 @@
       <section id="typography" class="demo-section">
         <h2>Typography</h2>
         <p>Semantic HTML elements styled directly. No classes needed.</p>
-        <div class="es-demo">
+        <div class="es-demo" data-layout="block">
           <pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
 &lt;h2&gt;Heading 2&lt;/h2&gt;
 &lt;h3&gt;Heading 3&lt;/h3&gt;
@@ -165,7 +165,7 @@
       <section id="form" class="demo-section">
         <h2>Form</h2>
         <p>All native form elements styled. Checkbox, radio, switch, range, select — no custom classes.</p>
-        <div class="es-demo">
+        <div class="es-demo" data-layout="block">
           <pre><code>&lt;div class="vstack" style="max-width:420px"&gt;
   &lt;div data-field&gt;
     &lt;label for="name"&gt;Name&lt;/label&gt;
@@ -253,7 +253,7 @@
       <section id="alert" class="demo-section">
         <h2>Alert</h2>
         <p>Use <code>role="alert"</code> with <code>data-variant</code> for contextual messaging.</p>
-        <div class="es-demo">
+        <div class="es-demo" data-layout="block">
           <pre><code>&lt;div class="vstack"&gt;
   &lt;div role="alert"&gt;Default alert — neutral information.&lt;/div&gt;
   &lt;div role="alert" data-variant="success"&gt;Your changes have been saved successfully.&lt;/div&gt;
@@ -286,7 +286,7 @@
       <section id="accordion" class="demo-section">
         <h2>Accordion</h2>
         <p>Native <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements. Adjacent items merge borders automatically.</p>
-        <div class="es-demo">
+        <div class="es-demo" data-layout="block">
           <pre><code>&lt;details open&gt;
   &lt;summary&gt;What is est?&lt;/summary&gt;
   &lt;p&gt;est is a minimal, zero-dependency UI library built on semantic HTML. It styles native elements directly without class pollution.&lt;/p&gt;
@@ -327,7 +327,7 @@
       <section id="tabs" class="demo-section">
         <h2>Tabs <span class="badge" data-variant="secondary">WC</span></h2>
         <p>Use the <code>&lt;es-tabs&gt;</code> Web Component. Handles keyboard navigation, ARIA, and focus management.</p>
-        <div class="es-demo">
+        <div class="es-demo" data-layout="block">
           <pre><code>&lt;es-tabs&gt;
   &lt;div role="tablist"&gt;
     &lt;button role="tab"&gt;Account&lt;/button&gt;
@@ -479,7 +479,7 @@ es.toast('Bottom toast.', null, { placement: 'bottom-center' })</code></pre>
       <section id="skeleton" class="demo-section">
         <h2>Skeleton</h2>
         <p>Use <code>role="status"</code> with class <code>skeleton</code> for loading placeholders. Add <code>.line</code> or <code>.box</code>.</p>
-        <div class="es-demo">
+        <div class="es-demo" data-layout="block">
           <pre><code>&lt;div class="card" style="max-width:360px"&gt;
   &lt;div class="hstack mb-4"&gt;
     &lt;div role="status" class="skeleton box" style="width:2.5rem;height:2.5rem;border-radius:9999px"&gt;&lt;/div&gt;

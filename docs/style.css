@@ -205,12 +205,49 @@ nav[data-topnav] {
   margin: 0 0 var(--space-5);
 }
 
+/* Tab bar above each demo */
+.demo-tabbar {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0;
+  gap: 0;
+}
+
+.demo-tab {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-7);
+  font-weight: var(--font-medium);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+
+  &:hover { color: var(--foreground); }
+
+  &.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+  }
+}
+
+.demo-copy,
+.demo-reset {
+  margin-left: auto;
+  font-size: var(--text-8);
+}
+
+.demo-reset { margin-left: var(--space-2); }
+
 .demo-box {
   border: 1px solid var(--border);
+  border-top: none;
   padding: var(--space-6);
-  border-radius: var(--radius-medium);
+  border-radius: 0 0 var(--radius-medium) var(--radius-medium);
   background: var(--card);
-  margin-top: var(--space-4);
 }
 
 .demo-content {
@@ -220,52 +257,14 @@ nav[data-topnav] {
   align-items: flex-start;
 }
 
-.demo-content.block { display: block; }
-.demo-content.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); }
+/* Demos that need block layout */
+.es-demo[data-layout="block"] .demo-content { display: block; }
 
-.es-demo pre { display: none; }
-
-/* Fullscreen editor */
-.es-demo.fullscreen {
-  background: rgb(from var(--background) r g b / 0.96);
-  backdrop-filter: blur(8px);
-  position: fixed;
-  z-index: 9999;
-  inset: 0;
-  padding: var(--space-4);
-  overflow: hidden;
-
-  es-tabs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-4);
-    height: 100%;
-
-    [role="tablist"] { display: none; }
-
-    [role="tabpanel"],
-    [role="tabpanel"][hidden] {
-      display: flex !important;
-      flex-direction: column;
-      overflow: auto;
-      min-height: 0;
-    }
-  }
-
-  .demo-box {
-    flex: 1;
-    margin-top: 0;
-    overflow: auto;
-  }
-
-  pre {
-    flex: 1;
-    overflow: auto;
-    margin: 0;
-    padding-top: 40px;
-
-    menu.actions { opacity: 1; }
-  }
+/* Code block inside demo */
+.demo-code-block {
+  margin-top: 0 !important;
+  border-top: none !important;
+  border-radius: 0 0 var(--radius-medium) var(--radius-medium) !important;
 }
 
 /* Grid demo */
@@ -288,28 +287,24 @@ pre {
 
   code { display: block; }
 
-  menu.actions {
-    opacity: 0;
-    position: absolute;
-    top: var(--space-2);
-    right: var(--space-2);
-    transition: opacity 150ms ease;
-  }
-
-  &:hover menu.actions { opacity: 1; }
-
-  menu.actions button {
-    background: rgb(0 0 0 / 0.5);
-    color: #ccc;
-    border: 1px solid rgb(255 255 255 / 0.15);
-    padding: 2px var(--space-2);
-    font-size: var(--text-8);
-
-    &:hover { background: rgb(0 0 0 / 0.8); }
-  }
-
   [contenteditable] { outline: none; }
 }
+
+/* Copy button for standalone pre blocks */
+.pre-copy {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  opacity: 0;
+  background: rgb(0 0 0 / 0.5) !important;
+  color: #ccc !important;
+  border-color: rgb(255 255 255 / 0.15) !important;
+  padding: 2px var(--space-2) !important;
+  font-size: var(--text-8) !important;
+  transition: opacity 150ms ease;
+}
+
+pre:hover .pre-copy { opacity: 1; }
 
 /* Theme icons */
 html[data-theme="dark"] .icon-light { display: none; }
