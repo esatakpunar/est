@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usage - est</title>
+
+  <meta property="og:image" content="https:&#x2F;&#x2F;esatakpunar.github.io&#x2F;est/thumb.png">
+  <link rel="stylesheet" href="https://esatakpunar.github.io/est/est.min.css">
+  <link rel="icon" href="https://esatakpunar.github.io/est/favicon.svg" type="image/svg+xml" />
+
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme');
+      if (t) {
+        document.documentElement.style.colorScheme = t;
+        document.documentElement.setAttribute('data-theme', t);
+      }
+    })();
+  </script>
+  <script src="https://esatakpunar.github.io/est/est.min.js" defer></script>
+  <script src="https://esatakpunar.github.io/est/main.js"></script>
+  <link href="https://esatakpunar.github.io/est/style.css" rel="stylesheet" />
+</head>
+
+<body data-sidebar-layout class="usage">
+  <nav data-topnav>
+    <div class="hstack justify-between w-100">
+      <div class="branding">
+        <button data-sidebar-toggle aria-label="Toggle sidebar menu">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="14" y2="18"/>
+          </svg>
+        </button>
+        <span class="favicon">
+          <a href="https://esatakpunar.github.io/est">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+              <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+              <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+              <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+            </svg>
+          </a>
+        </span>
+        <a href="https://esatakpunar.github.io/est" class="logo-text">est</a>
+      </div>
+
+      <div class="nav-links">
+        <a href="https://esatakpunar.github.io/est">Home</a>
+        <a href="https://esatakpunar.github.io/est/demo">Demo</a>
+        <a href="https://esatakpunar.github.io/est/components">Components</a>
+        <a href="https://esatakpunar.github.io/est/usage">Usage</a>
+        <es-dropdown>
+          <button popovertarget="nav-menu" class="outline small">
+            More
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <menu popover id="nav-menu">
+            <a href="https://esatakpunar.github.io/est/customizing" role="menuitem">Customizing</a>
+            <a href="https://esatakpunar.github.io/est/recipes" role="menuitem">Recipes</a>
+            <hr>
+            <a href="https://github.com/esatakpunar/est" role="menuitem" target="_blank" rel="noopener">GitHub</a>
+          </menu>
+        </es-dropdown>
+      </div>
+    </div>
+  </nav>
+
+  <aside data-sidebar class="main-sidebar">
+    <nav>
+      <ul>
+        <li><a href="https://github.com/esatakpunar/est" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://esatakpunar.github.io/est">Home</a></li>
+        <li><a href="https://esatakpunar.github.io/est/demo">Demo</a></li>
+        <li><a href="https://esatakpunar.github.io/est/usage">Usage</a></li>
+        <li><a href="https://esatakpunar.github.io/est/customizing">Customizing</a></li>
+        <li><a href="https://esatakpunar.github.io/est/recipes">Recipes</a></li>
+        <li>
+          <details open>
+            <summary>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+                <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+                <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+                <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+              </svg>
+              Components
+            </summary>
+            <ul>
+              <li><a href="https://esatakpunar.github.io/est/components">All components</a></li>
+              
+              
+              <li><a href="https://esatakpunar.github.io/est/components#typography">Typography
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#button">Button
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#form">Form
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#card">Card
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#badge">Badge
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#alert">Alert
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#avatar">Avatar
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#accordion">Accordion
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#table">Table
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#tabs">Tabs
+                <sup title="WebComponent">WC</sup></a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#dialog">Dialog
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#dropdown">Dropdown
+                <sup title="WebComponent">WC</sup></a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#toast">Toast
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#tooltip">Tooltip
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#progress">Progress &amp; Meter
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#spinner">Spinner
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#skeleton">Skeleton
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#sidebar">Sidebar
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#grid">Grid
+                </a></li>
+              
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+    <footer>
+      <button class="outline small" onclick="toggleTheme()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-light" role="img" aria-label="Light mode">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-dark" role="img" aria-label="Dark mode">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        Toggle theme
+      </button>
+    </footer>
+  </aside>
+
+  <main>
+    <div class="container">
+      
+<h1>Usage</h1>
+<h2 id="installation">Installation</h2>
+<h3 id="npm">npm</h3>
+<p>Install the package:</p>
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #61AFEF;">npm</span><span style="color: #98C379;"> install @esatakpunar/est</span></span></code></pre>
+<p>Reference from <code>node_modules</code>:</p>
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="html"><span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">link</span><span style="color: #D19A66;"> rel</span><span>=</span><span style="color: #98C379;">&quot;stylesheet&quot;</span><span style="color: #D19A66;"> href</span><span>=</span><span style="color: #98C379;">&quot;node_modules/@esatakpunar/est/est.min.css&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">script</span><span style="color: #D19A66;"> src</span><span>=</span><span style="color: #98C379;">&quot;node_modules/@esatakpunar/est/est.min.js&quot;</span><span style="color: #D19A66;"> defer</span><span>&gt;&lt;/</span><span style="color: #E06C75;">script</span><span>&gt;</span></span></code></pre><h3 id="cdn-jsdelivr">CDN (jsDelivr)</h3>
+<p>No install needed. Drop these two tags into your <code>&lt;head&gt;</code>:</p>
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="html"><span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">link</span><span style="color: #D19A66;"> rel</span><span>=</span><span style="color: #98C379;">&quot;stylesheet&quot;</span><span style="color: #D19A66;"> href</span><span>=</span><span style="color: #98C379;">&quot;https://cdn.jsdelivr.net/npm/@esatakpunar/est/est.min.css&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">script</span><span style="color: #D19A66;"> src</span><span>=</span><span style="color: #98C379;">&quot;https://cdn.jsdelivr.net/npm/@esatakpunar/est/est.min.js&quot;</span><span style="color: #D19A66;"> defer</span><span>&gt;&lt;/</span><span style="color: #E06C75;">script</span><span>&gt;</span></span></code></pre><h3 id="direct-download">Direct download</h3>
+<p>Download <code>est.min.css</code> and <code>est.min.js</code> from the <a rel="external" href="https://github.com/esatakpunar/est/releases">releases page</a> and host them yourself.</p>
+<hr />
+<h2 id="minimal-html">Minimal HTML</h2>
+<p>A complete page using est:</p>
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="html"><span class="giallo-l"><span>&lt;!</span><span style="color: #E06C75;">DOCTYPE</span><span style="color: #D19A66;"> html</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">html</span><span style="color: #D19A66;"> lang</span><span>=</span><span style="color: #98C379;">&quot;en&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">head</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">meta</span><span style="color: #D19A66;"> charset</span><span>=</span><span style="color: #98C379;">&quot;UTF-8&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">meta</span><span style="color: #D19A66;"> name</span><span>=</span><span style="color: #98C379;">&quot;viewport&quot;</span><span style="color: #D19A66;"> content</span><span>=</span><span style="color: #98C379;">&quot;width=device-width, initial-scale=1.0&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">title</span><span>&gt;My app&lt;/</span><span style="color: #E06C75;">title</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">link</span><span style="color: #D19A66;"> rel</span><span>=</span><span style="color: #98C379;">&quot;stylesheet&quot;</span><span style="color: #D19A66;"> href</span><span>=</span><span style="color: #98C379;">&quot;est.min.css&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;/</span><span style="color: #E06C75;">head</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">body</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">main</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">h1</span><span>&gt;Hello world&lt;/</span><span style="color: #E06C75;">h1</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">p</span><span>&gt;Styled out of the box.&lt;/</span><span style="color: #E06C75;">p</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">button</span><span>&gt;Click me&lt;/</span><span style="color: #E06C75;">button</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #E06C75;">main</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">script</span><span style="color: #D19A66;"> src</span><span>=</span><span style="color: #98C379;">&quot;est.min.js&quot;</span><span style="color: #D19A66;"> defer</span><span>&gt;&lt;/</span><span style="color: #E06C75;">script</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;/</span><span style="color: #E06C75;">body</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;/</span><span style="color: #E06C75;">html</span><span>&gt;</span></span></code></pre>
+<hr />
+<h2 id="javascript-api">JavaScript API</h2>
+<p>Interactive components register as Web Components (<code>es-tabs</code>, <code>es-dropdown</code>) and expose a global <code>es.*</code> API:</p>
+<h3 id="toast">Toast</h3>
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="javascript"><span class="giallo-l"><span style="color: #7F848E;font-style: italic;">// Simple message</span></span>
+<span class="giallo-l"><span style="color: #E5C07B;">es</span><span>.</span><span style="color: #61AFEF;">toast</span><span>(</span><span style="color: #98C379;">&#39;File saved.&#39;</span><span>)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7F848E;font-style: italic;">// With title and variant</span></span>
+<span class="giallo-l"><span style="color: #E5C07B;">es</span><span>.</span><span style="color: #61AFEF;">toast</span><span>(</span><span style="color: #98C379;">&#39;Your changes have been saved.&#39;</span><span>,</span><span style="color: #98C379;"> &#39;Success&#39;</span><span>, {</span><span style="color: #E06C75;"> variant</span><span>:</span><span style="color: #98C379;"> &#39;success&#39;</span><span> })</span></span>
+<span class="giallo-l"><span style="color: #E5C07B;">es</span><span>.</span><span style="color: #61AFEF;">toast</span><span>(</span><span style="color: #98C379;">&#39;Something went wrong.&#39;</span><span>,</span><span style="color: #98C379;"> &#39;Error&#39;</span><span>, {</span><span style="color: #E06C75;"> variant</span><span>:</span><span style="color: #98C379;"> &#39;danger&#39;</span><span> })</span></span>
+<span class="giallo-l"><span style="color: #E5C07B;">es</span><span>.</span><span style="color: #61AFEF;">toast</span><span>(</span><span style="color: #98C379;">&#39;Check your input.&#39;</span><span>,</span><span style="color: #98C379;"> &#39;Warning&#39;</span><span>, {</span><span style="color: #E06C75;"> variant</span><span>:</span><span style="color: #98C379;"> &#39;warning&#39;</span><span> })</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7F848E;font-style: italic;">// Placement options: &#39;top-right&#39; (default), &#39;top-left&#39;, &#39;top-center&#39;,</span></span>
+<span class="giallo-l"><span style="color: #7F848E;font-style: italic;">//                   &#39;bottom-right&#39;, &#39;bottom-left&#39;, &#39;bottom-center&#39;</span></span>
+<span class="giallo-l"><span style="color: #E5C07B;">es</span><span>.</span><span style="color: #61AFEF;">toast</span><span>(</span><span style="color: #98C379;">&#39;Bottom toast&#39;</span><span>,</span><span style="color: #98C379;"> &#39;Note&#39;</span><span>, {</span><span style="color: #E06C75;"> placement</span><span>:</span><span style="color: #98C379;"> &#39;bottom-center&#39;</span><span> })</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7F848E;font-style: italic;">// Duration in ms (0 = persist until dismissed)</span></span>
+<span class="giallo-l"><span style="color: #E5C07B;">es</span><span>.</span><span style="color: #61AFEF;">toast</span><span>(</span><span style="color: #98C379;">&#39;Persists until closed.&#39;</span><span>,</span><span style="color: #D19A66;"> null</span><span>, {</span><span style="color: #E06C75;"> duration</span><span>:</span><span style="color: #D19A66;"> 0</span><span> })</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7F848E;font-style: italic;">// Custom element</span></span>
+<span class="giallo-l"><span style="color: #E5C07B;">es</span><span>.</span><span style="color: #E5C07B;">toast</span><span>.</span><span style="color: #61AFEF;">el</span><span>(</span><span style="color: #E5C07B;">document</span><span>.</span><span style="color: #61AFEF;">querySelector</span><span>(</span><span style="color: #98C379;">&#39;#my-template&#39;</span><span>))</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7F848E;font-style: italic;">// Clear all toasts</span></span>
+<span class="giallo-l"><span style="color: #E5C07B;">es</span><span>.</span><span style="color: #E5C07B;">toast</span><span>.</span><span style="color: #61AFEF;">clear</span><span>()</span></span></code></pre><h3 id="tabs">Tabs</h3>
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="html"><span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">es-tabs</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> role</span><span>=</span><span style="color: #98C379;">&quot;tablist&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">button</span><span style="color: #D19A66;"> role</span><span>=</span><span style="color: #98C379;">&quot;tab&quot;</span><span>&gt;Tab 1&lt;/</span><span style="color: #E06C75;">button</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">button</span><span style="color: #D19A66;"> role</span><span>=</span><span style="color: #98C379;">&quot;tab&quot;</span><span>&gt;Tab 2&lt;/</span><span style="color: #E06C75;">button</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> role</span><span>=</span><span style="color: #98C379;">&quot;tabpanel&quot;</span><span>&gt;Content 1&lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> role</span><span>=</span><span style="color: #98C379;">&quot;tabpanel&quot;</span><span>&gt;Content 2&lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;/</span><span style="color: #E06C75;">es-tabs</span><span>&gt;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">script</span><span>&gt;</span></span>
+<span class="giallo-l"><span style="color: #7F848E;font-style: italic;">// Programmatic control</span></span>
+<span class="giallo-l"><span style="color: #C678DD;">const</span><span style="color: #E5C07B;"> tabs</span><span style="color: #56B6C2;"> =</span><span style="color: #E5C07B;"> document</span><span>.</span><span style="color: #61AFEF;">querySelector</span><span>(</span><span style="color: #98C379;">&#39;es-tabs&#39;</span><span>);</span></span>
+<span class="giallo-l"><span style="color: #E5C07B;">tabs</span><span>.</span><span style="color: #E06C75;">activeIndex</span><span style="color: #56B6C2;"> =</span><span style="color: #D19A66;"> 1</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7F848E;font-style: italic;">// Events</span></span>
+<span class="giallo-l"><span style="color: #E5C07B;">tabs</span><span>.</span><span style="color: #61AFEF;">addEventListener</span><span>(</span><span style="color: #98C379;">&#39;es-tab-change&#39;</span><span>,</span><span style="color: #E06C75;font-style: italic;"> e</span><span style="color: #C678DD;"> =&gt;</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #E5C07B;">  console</span><span>.</span><span style="color: #61AFEF;">log</span><span>(</span><span style="color: #98C379;">&#39;Active tab:&#39;</span><span>,</span><span style="color: #E5C07B;"> e</span><span>.</span><span style="color: #E5C07B;">detail</span><span>.</span><span style="color: #E06C75;">index</span><span>);</span></span>
+<span class="giallo-l"><span>});</span></span>
+<span class="giallo-l"><span>&lt;/</span><span style="color: #E06C75;">script</span><span>&gt;</span></span></code></pre><h3 id="dropdown">Dropdown</h3>
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="html"><span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">es-dropdown</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">button</span><span style="color: #D19A66;"> popovertarget</span><span>=</span><span style="color: #98C379;">&quot;my-menu&quot;</span><span>&gt;Options&lt;/</span><span style="color: #E06C75;">button</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">menu</span><span style="color: #D19A66;"> popover id</span><span>=</span><span style="color: #98C379;">&quot;my-menu&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">button</span><span style="color: #D19A66;"> role</span><span>=</span><span style="color: #98C379;">&quot;menuitem&quot;</span><span>&gt;Edit&lt;/</span><span style="color: #E06C75;">button</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">button</span><span style="color: #D19A66;"> role</span><span>=</span><span style="color: #98C379;">&quot;menuitem&quot;</span><span>&gt;Duplicate&lt;/</span><span style="color: #E06C75;">button</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">hr</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">button</span><span style="color: #D19A66;"> role</span><span>=</span><span style="color: #98C379;">&quot;menuitem&quot;</span><span style="color: #D19A66;"> data-variant</span><span>=</span><span style="color: #98C379;">&quot;danger&quot;</span><span>&gt;Delete&lt;/</span><span style="color: #E06C75;">button</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #E06C75;">menu</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;/</span><span style="color: #E06C75;">es-dropdown</span><span>&gt;</span></span></code></pre>
+<hr />
+<h2 id="dark-mode">Dark mode</h2>
+<p>Dark mode is automatic via <code>prefers-color-scheme</code>. To force a specific scheme:</p>
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="html"><span class="giallo-l"><span style="color: #7F848E;font-style: italic;">&lt;!-- Force dark --&gt;</span></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">html</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;color-scheme: dark&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7F848E;font-style: italic;">&lt;!-- Force light --&gt;</span></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">html</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;color-scheme: light&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7F848E;font-style: italic;">&lt;!-- Toggle with JS --&gt;</span></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">script</span><span>&gt;</span></span>
+<span class="giallo-l"><span style="color: #C678DD;">function</span><span style="color: #61AFEF;"> toggleTheme</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #C678DD;">  const</span><span style="color: #E5C07B;"> isDark</span><span style="color: #56B6C2;"> =</span><span style="color: #E5C07B;"> document</span><span>.</span><span style="color: #E5C07B;">documentElement</span><span>.</span><span style="color: #E5C07B;">style</span><span>.</span><span style="color: #E06C75;">colorScheme</span><span style="color: #56B6C2;"> ===</span><span style="color: #98C379;"> &#39;dark&#39;</span><span>;</span></span>
+<span class="giallo-l"><span style="color: #E5C07B;">  document</span><span>.</span><span style="color: #E5C07B;">documentElement</span><span>.</span><span style="color: #E5C07B;">style</span><span>.</span><span style="color: #E06C75;">colorScheme</span><span style="color: #56B6C2;"> =</span><span style="color: #E06C75;"> isDark</span><span style="color: #C678DD;"> ?</span><span style="color: #98C379;"> &#39;light&#39;</span><span style="color: #C678DD;"> :</span><span style="color: #98C379;"> &#39;dark&#39;</span><span>;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"><span>&lt;/</span><span style="color: #E06C75;">script</span><span>&gt;</span></span></code></pre>
+<hr />
+<h2 id="local-dev-setup">Local dev setup</h2>
+<p>Requires <a rel="external" href="https://github.com/getzola/zola/releases">zola</a> static site generator.</p>
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #56B6C2;">cd</span><span style="color: #98C379;"> docs</span><span> &amp;&amp;</span><span style="color: #61AFEF;"> zola</span><span style="color: #98C379;"> serve</span></span></code></pre>
+<p>Access the docs site at <code>http://localhost:1111</code>. After changing CSS or JS files, run <code>make dist</code>.</p>
+
+
+    </div>
+  </main>
+</body>
+</html>

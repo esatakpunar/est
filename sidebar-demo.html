@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar demo</title>
+  <link rel="stylesheet" href="est.min.css">
+  <style>
+    html, body { height: 100%; }
+    body { font-size: 0.8rem; }
+  </style>
+</head>
+<body data-sidebar-layout>
+  <nav data-topnav>
+    <button data-sidebar-toggle aria-label="Toggle sidebar">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="14" y2="18"/>
+      </svg>
+    </button>
+    <strong>Brand</strong>
+  </nav>
+  <aside data-sidebar>
+    <nav>
+      <ul>
+        <li><a href="#" aria-current="page">Dashboard</a></li>
+        <li><a href="#">Analytics</a></li>
+        <li><a href="#">Projects</a></li>
+        <li>
+          <details open>
+            <summary>Settings</summary>
+            <ul>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Billing</a></li>
+              <li><a href="#">Team</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+    <footer>
+      <button class="outline small">Sign out</button>
+    </footer>
+  </aside>
+  <main>
+    <div class="container">
+      <h3>Dashboard</h3>
+      <p class="text-light">Welcome back. Here's what's happening.</p>
+      <div class="row mt-4">
+        <div class="col-4"><div class="card"><strong>24</strong><br><small class="text-light">Projects</small></div></div>
+        <div class="col-4"><div class="card"><strong>1,204</strong><br><small class="text-light">Visitors</small></div></div>
+        <div class="col-4"><div class="card"><strong>98%</strong><br><small class="text-light">Uptime</small></div></div>
+      </div>
+    </div>
+  </main>
+  <script src="est.min.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes - est</title>
+
+  <meta property="og:image" content="https:&#x2F;&#x2F;esatakpunar.github.io&#x2F;est/thumb.png">
+  <link rel="stylesheet" href="https://esatakpunar.github.io/est/est.min.css">
+  <link rel="icon" href="https://esatakpunar.github.io/est/favicon.svg" type="image/svg+xml" />
+
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme');
+      if (t) {
+        document.documentElement.style.colorScheme = t;
+        document.documentElement.setAttribute('data-theme', t);
+      }
+    })();
+  </script>
+  <script src="https://esatakpunar.github.io/est/est.min.js" defer></script>
+  <script src="https://esatakpunar.github.io/est/main.js"></script>
+  <link href="https://esatakpunar.github.io/est/style.css" rel="stylesheet" />
+</head>
+
+<body data-sidebar-layout class="recipes">
+  <nav data-topnav>
+    <div class="hstack justify-between w-100">
+      <div class="branding">
+        <button data-sidebar-toggle aria-label="Toggle sidebar menu">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="14" y2="18"/>
+          </svg>
+        </button>
+        <span class="favicon">
+          <a href="https://esatakpunar.github.io/est">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+              <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+              <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+              <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+            </svg>
+          </a>
+        </span>
+        <a href="https://esatakpunar.github.io/est" class="logo-text">est</a>
+      </div>
+
+      <div class="nav-links">
+        <a href="https://esatakpunar.github.io/est">Home</a>
+        <a href="https://esatakpunar.github.io/est/demo">Demo</a>
+        <a href="https://esatakpunar.github.io/est/components">Components</a>
+        <a href="https://esatakpunar.github.io/est/usage">Usage</a>
+        <es-dropdown>
+          <button popovertarget="nav-menu" class="outline small">
+            More
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <menu popover id="nav-menu">
+            <a href="https://esatakpunar.github.io/est/customizing" role="menuitem">Customizing</a>
+            <a href="https://esatakpunar.github.io/est/recipes" role="menuitem">Recipes</a>
+            <hr>
+            <a href="https://github.com/esatakpunar/est" role="menuitem" target="_blank" rel="noopener">GitHub</a>
+          </menu>
+        </es-dropdown>
+      </div>
+    </div>
+  </nav>
+
+  <aside data-sidebar class="main-sidebar">
+    <nav>
+      <ul>
+        <li><a href="https://github.com/esatakpunar/est" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://esatakpunar.github.io/est">Home</a></li>
+        <li><a href="https://esatakpunar.github.io/est/demo">Demo</a></li>
+        <li><a href="https://esatakpunar.github.io/est/usage">Usage</a></li>
+        <li><a href="https://esatakpunar.github.io/est/customizing">Customizing</a></li>
+        <li><a href="https://esatakpunar.github.io/est/recipes">Recipes</a></li>
+        <li>
+          <details open>
+            <summary>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+                <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+                <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+                <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+              </svg>
+              Components
+            </summary>
+            <ul>
+              <li><a href="https://esatakpunar.github.io/est/components">All components</a></li>
+              
+              
+              <li><a href="https://esatakpunar.github.io/est/components#typography">Typography
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#button">Button
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#form">Form
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#card">Card
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#badge">Badge
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#alert">Alert
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#avatar">Avatar
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#accordion">Accordion
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#table">Table
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#tabs">Tabs
+                <sup title="WebComponent">WC</sup></a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#dialog">Dialog
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#dropdown">Dropdown
+                <sup title="WebComponent">WC</sup></a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#toast">Toast
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#tooltip">Tooltip
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#progress">Progress &amp; Meter
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#spinner">Spinner
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#skeleton">Skeleton
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#sidebar">Sidebar
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#grid">Grid
+                </a></li>
+              
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+    <footer>
+      <button class="outline small" onclick="toggleTheme()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-light" role="img" aria-label="Light mode">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-dark" role="img" aria-label="Dark mode">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        Toggle theme
+      </button>
+    </footer>
+  </aside>
+
+  <main>
+    <div class="container">
+      
+<h1>Recipes</h1>
+<p>Common patterns and combinations built with est components.</p>
+<hr />
+<h2 id="login-form">Login form</h2>
+<p>A minimal centered login card.</p>
+<div class="es-demo">
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="html"><span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;max-width:360px;margin:auto&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;card&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">h3</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;margin:0 0 0.25rem&quot;</span><span>&gt;Sign in&lt;/</span><span style="color: #E06C75;">h3</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">p</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;text-light&quot;</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;margin:0 0 1.5rem;font-size:0.875rem&quot;</span><span>&gt;Enter your credentials to continue.&lt;/</span><span style="color: #E06C75;">p</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> data-field</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">label</span><span style="color: #D19A66;"> for</span><span>=</span><span style="color: #98C379;">&quot;l-email&quot;</span><span>&gt;Email&lt;/</span><span style="color: #E06C75;">label</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">input</span><span style="color: #D19A66;"> type</span><span>=</span><span style="color: #98C379;">&quot;email&quot;</span><span style="color: #D19A66;"> id</span><span>=</span><span style="color: #98C379;">&quot;l-email&quot;</span><span style="color: #D19A66;"> placeholder</span><span>=</span><span style="color: #98C379;">&quot;you@example.com&quot;</span><span style="color: #D19A66;"> autocomplete</span><span>=</span><span style="color: #98C379;">&quot;email&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> data-field</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">label</span><span style="color: #D19A66;"> for</span><span>=</span><span style="color: #98C379;">&quot;l-pass&quot;</span><span>&gt;Password&lt;/</span><span style="color: #E06C75;">label</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">input</span><span style="color: #D19A66;"> type</span><span>=</span><span style="color: #98C379;">&quot;password&quot;</span><span style="color: #D19A66;"> id</span><span>=</span><span style="color: #98C379;">&quot;l-pass&quot;</span><span style="color: #D19A66;"> placeholder</span><span>=</span><span style="color: #98C379;">&quot;••••••••&quot;</span><span style="color: #D19A66;"> autocomplete</span><span>=</span><span style="color: #98C379;">&quot;current-password&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">button</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;width:100%;margin-top:0.5rem&quot;</span><span>&gt;Sign in&lt;/</span><span style="color: #E06C75;">button</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">p</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;text-light&quot;</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;text-align:center;font-size:0.75rem;margin-top:1rem&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      No account? &lt;</span><span style="color: #E06C75;">a</span><span style="color: #D19A66;"> href</span><span>=</span><span style="color: #98C379;">&quot;#&quot;</span><span>&gt;Sign up&lt;/</span><span style="color: #E06C75;">a</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;/</span><span style="color: #E06C75;">p</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span></code></pre>
+</div>
+<h2 id="notification-card">Notification card</h2>
+<p>Avatar + text + action in a card layout.</p>
+<div class="es-demo">
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="html"><span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;card&quot;</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;max-width:380px&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;hstack justify-between&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;hstack gap-2&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">figure</span><span style="color: #D19A66;"> data-variant</span><span>=</span><span style="color: #98C379;">&quot;avatar&quot;</span><span>&gt;JD&lt;/</span><span style="color: #E06C75;">figure</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>        &lt;</span><span style="color: #E06C75;">strong</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;font-size:0.875rem&quot;</span><span>&gt;Jane Doe&lt;/</span><span style="color: #E06C75;">strong</span><span>&gt;</span></span>
+<span class="giallo-l"><span>        &lt;</span><span style="color: #E06C75;">p</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;font-size:0.75rem;color:var(--muted-foreground);margin:0&quot;</span><span>&gt;Commented on your post&lt;/</span><span style="color: #E06C75;">p</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">span</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;badge&quot;</span><span style="color: #D19A66;"> data-variant</span><span>=</span><span style="color: #98C379;">&quot;success&quot;</span><span>&gt;New&lt;/</span><span style="color: #E06C75;">span</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">p</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;font-size:0.875rem;margin-top:1rem;color:var(--muted-foreground)&quot;</span><span>&gt;&quot;Great article! Really helpful for understanding the new API changes.&quot;&lt;/</span><span style="color: #E06C75;">p</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;hstack&quot;</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;margin-top:1rem&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">button</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;small&quot;</span><span>&gt;Reply&lt;/</span><span style="color: #E06C75;">button</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">button</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;small outline&quot;</span><span>&gt;Dismiss&lt;/</span><span style="color: #E06C75;">button</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span></code></pre>
+</div>
+<h2 id="confirm-delete-dialog">Confirm delete dialog</h2>
+<p>Destructive action pattern with a warning alert inside a dialog.</p>
+<div class="es-demo">
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="html"><span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">button</span><span style="color: #D19A66;"> data-variant</span><span>=</span><span style="color: #98C379;">&quot;danger&quot;</span><span style="color: #D19A66;"> commandfor</span><span>=</span><span style="color: #98C379;">&quot;del-dialog&quot;</span><span style="color: #D19A66;"> command</span><span>=</span><span style="color: #98C379;">&quot;show-modal&quot;</span><span>&gt;Delete project&lt;/</span><span style="color: #E06C75;">button</span><span>&gt;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">dialog</span><span style="color: #D19A66;"> id</span><span>=</span><span style="color: #98C379;">&quot;del-dialog&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">header</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">h4</span><span>&gt;Delete project&lt;/</span><span style="color: #E06C75;">h4</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">p</span><span>&gt;This action is permanent and cannot be undone.&lt;/</span><span style="color: #E06C75;">p</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #E06C75;">header</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> role</span><span>=</span><span style="color: #98C379;">&quot;alert&quot;</span><span style="color: #D19A66;"> data-variant</span><span>=</span><span style="color: #98C379;">&quot;danger&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      All files, members, and history will be permanently removed.</span></span>
+<span class="giallo-l"><span>    &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">footer</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">button</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;outline&quot;</span><span style="color: #D19A66;"> commandfor</span><span>=</span><span style="color: #98C379;">&quot;del-dialog&quot;</span><span style="color: #D19A66;"> command</span><span>=</span><span style="color: #98C379;">&quot;close&quot;</span><span>&gt;Cancel&lt;/</span><span style="color: #E06C75;">button</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">button</span><span style="color: #D19A66;"> data-variant</span><span>=</span><span style="color: #98C379;">&quot;danger&quot;</span><span>&gt;Yes, delete&lt;/</span><span style="color: #E06C75;">button</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #E06C75;">footer</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;/</span><span style="color: #E06C75;">dialog</span><span>&gt;</span></span></code></pre>
+</div>
+<h2 id="stats-row">Stats row</h2>
+<p>KPI cards in a grid.</p>
+<div class="es-demo">
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="html"><span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;row&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;col-3&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;card&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">p</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;text-light&quot;</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.5rem&quot;</span><span>&gt;Revenue&lt;/</span><span style="color: #E06C75;">p</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">strong</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;font-size:1.5rem&quot;</span><span>&gt;$48,200&lt;/</span><span style="color: #E06C75;">strong</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">p</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;font-size:0.75rem;color:var(--success);margin:0.25rem 0 0&quot;</span><span>&gt;↑ 12% this month&lt;/</span><span style="color: #E06C75;">p</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;col-3&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;card&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">p</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;text-light&quot;</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.5rem&quot;</span><span>&gt;Users&lt;/</span><span style="color: #E06C75;">p</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">strong</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;font-size:1.5rem&quot;</span><span>&gt;3,842&lt;/</span><span style="color: #E06C75;">strong</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">p</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;font-size:0.75rem;color:var(--success);margin:0.25rem 0 0&quot;</span><span>&gt;↑ 8% this month&lt;/</span><span style="color: #E06C75;">p</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;col-3&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;card&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">p</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;text-light&quot;</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.5rem&quot;</span><span>&gt;Churn&lt;/</span><span style="color: #E06C75;">p</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">strong</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;font-size:1.5rem&quot;</span><span>&gt;2.4%&lt;/</span><span style="color: #E06C75;">strong</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">p</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;font-size:0.75rem;color:var(--danger);margin:0.25rem 0 0&quot;</span><span>&gt;↑ 0.3% this month&lt;/</span><span style="color: #E06C75;">p</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;col-3&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;card&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">p</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;text-light&quot;</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.5rem&quot;</span><span>&gt;Uptime&lt;/</span><span style="color: #E06C75;">p</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">strong</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;font-size:1.5rem&quot;</span><span>&gt;99.9%&lt;/</span><span style="color: #E06C75;">strong</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">p</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;font-size:0.75rem;color:var(--muted-foreground);margin:0.25rem 0 0&quot;</span><span>&gt;Last 30 days&lt;/</span><span style="color: #E06C75;">p</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span></code></pre>
+</div>
+<h2 id="input-with-button-group">Input with button group</h2>
+<p>Use <code>fieldset.group</code> to attach a button to an input.</p>
+<div class="es-demo">
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="html"><span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">fieldset</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;group&quot;</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;max-width:400px&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">input</span><span style="color: #D19A66;"> type</span><span>=</span><span style="color: #98C379;">&quot;search&quot;</span><span style="color: #D19A66;"> placeholder</span><span>=</span><span style="color: #98C379;">&quot;Search components…&quot;</span><span style="color: #D19A66;"> aria-label</span><span>=</span><span style="color: #98C379;">&quot;Search&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">button</span><span>&gt;Search&lt;/</span><span style="color: #E06C75;">button</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;/</span><span style="color: #E06C75;">fieldset</span><span>&gt;</span></span></code></pre>
+</div>
+<h2 id="loading-states">Loading states</h2>
+<p>Combine skeletons and spinners for rich loading UX.</p>
+<div class="es-demo">
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="html"><span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;row&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;col-6&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;card&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;hstack mb-4&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>        &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> role</span><span>=</span><span style="color: #98C379;">&quot;status&quot;</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;skeleton&quot;</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;width:2.5rem;height:2.5rem;border-radius:9999px;flex-shrink:0&quot;</span><span>&gt;&lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>        &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;flex:1;display:flex;flex-direction:column;gap:0.4rem&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>          &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> role</span><span>=</span><span style="color: #98C379;">&quot;status&quot;</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;skeleton line&quot;</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;width:55%&quot;</span><span>&gt;&lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>          &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> role</span><span>=</span><span style="color: #98C379;">&quot;status&quot;</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;skeleton line&quot;</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;width:35%&quot;</span><span>&gt;&lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>        &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> role</span><span>=</span><span style="color: #98C379;">&quot;status&quot;</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;skeleton line&quot;</span><span>&gt;&lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> role</span><span>=</span><span style="color: #98C379;">&quot;status&quot;</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;skeleton line&quot;</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;width:85%&quot;</span><span>&gt;&lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;col-6&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #E06C75;">div</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;card&quot;</span><span style="color: #D19A66;"> aria-busy</span><span>=</span><span style="color: #98C379;">&quot;true&quot;</span><span style="color: #D19A66;"> data-spinner</span><span>=</span><span style="color: #98C379;">&quot;overlay&quot;</span><span style="color: #D19A66;"> style</span><span>=</span><span style="color: #98C379;">&quot;min-height:120px&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">h4</span><span>&gt;Processing…&lt;/</span><span style="color: #E06C75;">h4</span><span>&gt;</span></span>
+<span class="giallo-l"><span>      &lt;</span><span style="color: #E06C75;">p</span><span style="color: #D19A66;"> class</span><span>=</span><span style="color: #98C379;">&quot;text-light&quot;</span><span>&gt;This will take a moment.&lt;/</span><span style="color: #E06C75;">p</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;/</span><span style="color: #E06C75;">div</span><span>&gt;</span></span></code></pre>
+</div>
+
+
+    </div>
+  </main>
+</body>
+</html>

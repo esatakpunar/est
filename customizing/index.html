@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customizing - est</title>
+
+  <meta property="og:image" content="https:&#x2F;&#x2F;esatakpunar.github.io&#x2F;est/thumb.png">
+  <link rel="stylesheet" href="https://esatakpunar.github.io/est/est.min.css">
+  <link rel="icon" href="https://esatakpunar.github.io/est/favicon.svg" type="image/svg+xml" />
+
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme');
+      if (t) {
+        document.documentElement.style.colorScheme = t;
+        document.documentElement.setAttribute('data-theme', t);
+      }
+    })();
+  </script>
+  <script src="https://esatakpunar.github.io/est/est.min.js" defer></script>
+  <script src="https://esatakpunar.github.io/est/main.js"></script>
+  <link href="https://esatakpunar.github.io/est/style.css" rel="stylesheet" />
+</head>
+
+<body data-sidebar-layout class="customizing">
+  <nav data-topnav>
+    <div class="hstack justify-between w-100">
+      <div class="branding">
+        <button data-sidebar-toggle aria-label="Toggle sidebar menu">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="14" y2="18"/>
+          </svg>
+        </button>
+        <span class="favicon">
+          <a href="https://esatakpunar.github.io/est">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+              <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+              <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+              <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+            </svg>
+          </a>
+        </span>
+        <a href="https://esatakpunar.github.io/est" class="logo-text">est</a>
+      </div>
+
+      <div class="nav-links">
+        <a href="https://esatakpunar.github.io/est">Home</a>
+        <a href="https://esatakpunar.github.io/est/demo">Demo</a>
+        <a href="https://esatakpunar.github.io/est/components">Components</a>
+        <a href="https://esatakpunar.github.io/est/usage">Usage</a>
+        <es-dropdown>
+          <button popovertarget="nav-menu" class="outline small">
+            More
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <menu popover id="nav-menu">
+            <a href="https://esatakpunar.github.io/est/customizing" role="menuitem">Customizing</a>
+            <a href="https://esatakpunar.github.io/est/recipes" role="menuitem">Recipes</a>
+            <hr>
+            <a href="https://github.com/esatakpunar/est" role="menuitem" target="_blank" rel="noopener">GitHub</a>
+          </menu>
+        </es-dropdown>
+      </div>
+    </div>
+  </nav>
+
+  <aside data-sidebar class="main-sidebar">
+    <nav>
+      <ul>
+        <li><a href="https://github.com/esatakpunar/est" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://esatakpunar.github.io/est">Home</a></li>
+        <li><a href="https://esatakpunar.github.io/est/demo">Demo</a></li>
+        <li><a href="https://esatakpunar.github.io/est/usage">Usage</a></li>
+        <li><a href="https://esatakpunar.github.io/est/customizing">Customizing</a></li>
+        <li><a href="https://esatakpunar.github.io/est/recipes">Recipes</a></li>
+        <li>
+          <details open>
+            <summary>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+                <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+                <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+                <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+              </svg>
+              Components
+            </summary>
+            <ul>
+              <li><a href="https://esatakpunar.github.io/est/components">All components</a></li>
+              
+              
+              <li><a href="https://esatakpunar.github.io/est/components#typography">Typography
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#button">Button
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#form">Form
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#card">Card
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#badge">Badge
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#alert">Alert
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#avatar">Avatar
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#accordion">Accordion
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#table">Table
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#tabs">Tabs
+                <sup title="WebComponent">WC</sup></a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#dialog">Dialog
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#dropdown">Dropdown
+                <sup title="WebComponent">WC</sup></a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#toast">Toast
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#tooltip">Tooltip
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#progress">Progress &amp; Meter
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#spinner">Spinner
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#skeleton">Skeleton
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#sidebar">Sidebar
+                </a></li>
+              
+              <li><a href="https://esatakpunar.github.io/est/components#grid">Grid
+                </a></li>
+              
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+    <footer>
+      <button class="outline small" onclick="toggleTheme()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-light" role="img" aria-label="Light mode">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-dark" role="img" aria-label="Dark mode">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        Toggle theme
+      </button>
+    </footer>
+  </aside>
+
+  <main>
+    <div class="container">
+      
+<h1>Customizing</h1>
+<p>All design decisions in est live in CSS custom properties (variables) declared in the <code>theme</code> layer.
+Override them in your own stylesheet after importing est and they take effect everywhere — including dark mode.</p>
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="css"><span class="giallo-l"><span style="color: #7F848E;font-style: italic;">/* After importing est.min.css */</span></span>
+<span class="giallo-l"><span style="color: #56B6C2;">:root</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #E06C75;">  --primary</span><span>:</span><span style="color: #D19A66;"> #0070f3</span><span>;</span><span style="color: #7F848E;font-style: italic;">               /* accent color */</span></span>
+<span class="giallo-l"><span style="color: #E06C75;">  --primary-foreground</span><span>:</span><span style="color: #D19A66;"> #ffffff</span><span>;</span></span>
+<span class="giallo-l"><span style="color: #E06C75;">  --radius-medium</span><span>:</span><span style="color: #D19A66;"> 0.375</span><span style="color: #E06C75;">rem</span><span>;</span><span style="color: #7F848E;font-style: italic;">        /* border radius */</span></span>
+<span class="giallo-l"><span style="color: #E06C75;">  --font-sans</span><span>:</span><span style="color: #98C379;"> &quot;Inter&quot;</span><span>,</span><span style="color: #D19A66;"> system-ui</span><span>;</span><span style="color: #7F848E;font-style: italic;">  /* font stack */</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<hr />
+<h2 id="color-tokens">Color tokens</h2>
+<p>All colors use <code>light-dark()</code> for automatic dark mode. Override both values to customize dark mode separately.</p>
+<div class="table token-table">
+  <table>
+    <thead><tr><th>Token</th><th>Light</th><th>Dark</th><th>Usage</th></tr></thead>
+    <tbody>
+      <tr><td>--primary</td><td><span class="swatch" style="background:#6e56cf"></span>#6e56cf</td><td>#a78bfa</td><td>Buttons, links, focus ring, active tab</td></tr>
+      <tr><td>--primary-foreground</td><td>#ffffff</td><td>#0a0a0a</td><td>Text on primary bg</td></tr>
+      <tr><td>--background</td><td>#ffffff</td><td>#0a0a0a</td><td>Page background</td></tr>
+      <tr><td>--foreground</td><td>#111111</td><td>#f5f5f5</td><td>Default text</td></tr>
+      <tr><td>--secondary</td><td><span class="swatch" style="background:#f5f5f5;"></span>#f5f5f5</td><td>#1f1f1f</td><td>Secondary buttons, hover states</td></tr>
+      <tr><td>--muted-foreground</td><td>#8c8c8c</td><td>#737373</td><td>Subdued text, labels</td></tr>
+      <tr><td>--border</td><td><span class="swatch" style="background:#e5e5e5"></span>#e5e5e5</td><td>#2a2a2a</td><td>Borders everywhere</td></tr>
+      <tr><td>--accent</td><td><span class="swatch" style="background:#ede9fe"></span>#ede9fe</td><td>#2d1f6e</td><td>Hover tint, badges, sidebar active</td></tr>
+      <tr><td>--danger</td><td>#dc2626</td><td>#f87171</td><td>Destructive actions, error states</td></tr>
+      <tr><td>--success</td><td>#16a34a</td><td>#4ade80</td><td>Success states</td></tr>
+      <tr><td>--warning</td><td>#d97706</td><td>#fbbf24</td><td>Warning states</td></tr>
+    </tbody>
+  </table>
+</div>
+<hr />
+<h2 id="spacing-shape-tokens">Spacing &amp; shape tokens</h2>
+<div class="table token-table">
+  <table>
+    <thead><tr><th>Token</th><th>Value</th><th>Usage</th></tr></thead>
+    <tbody>
+      <tr><td>--radius-small</td><td>0.25rem</td><td>Checkboxes, code, tooltips</td></tr>
+      <tr><td>--radius-medium</td><td>0.5rem</td><td>Inputs, buttons, dropdowns</td></tr>
+      <tr><td>--radius-large</td><td>0.875rem</td><td>Cards, dialogs</td></tr>
+      <tr><td>--radius-full</td><td>9999px</td><td>Avatars, badges, switches</td></tr>
+      <tr><td>--font-sans</td><td>-apple-system, …</td><td>All UI text</td></tr>
+      <tr><td>--font-mono</td><td>ui-monospace, …</td><td>Code blocks</td></tr>
+      <tr><td>--transition</td><td>150ms …</td><td>Most transitions</td></tr>
+      <tr><td>--transition-fast</td><td>120ms …</td><td>Hover, focus transitions</td></tr>
+    </tbody>
+  </table>
+</div>
+<hr />
+<h2 id="example-blue-accent">Example: blue accent</h2>
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="css"><span class="giallo-l"><span style="color: #56B6C2;">:root</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #E06C75;">  --primary</span><span>:</span><span style="color: #D19A66;"> #0070f3</span><span>;</span></span>
+<span class="giallo-l"><span style="color: #E06C75;">  --primary-foreground</span><span>:</span><span style="color: #D19A66;"> #ffffff</span><span>;</span></span>
+<span class="giallo-l"><span style="color: #E06C75;">  --ring</span><span>:</span><span style="color: #D19A66;"> #0070f3</span><span>;</span></span>
+<span class="giallo-l"><span style="color: #E06C75;">  --accent</span><span>:</span><span style="color: #D19A66;"> #eff6ff</span><span>;</span></span>
+<span class="giallo-l"><span style="color: #E06C75;">  --accent-foreground</span><span>:</span><span style="color: #D19A66;"> #0070f3</span><span>;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h2 id="example-rounded-corners">Example: rounded corners</h2>
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="css"><span class="giallo-l"><span style="color: #56B6C2;">:root</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #E06C75;">  --radius-small</span><span>:</span><span style="color: #D19A66;"> 0.5</span><span style="color: #E06C75;">rem</span><span>;</span></span>
+<span class="giallo-l"><span style="color: #E06C75;">  --radius-medium</span><span>:</span><span style="color: #D19A66;"> 0.75</span><span style="color: #E06C75;">rem</span><span>;</span></span>
+<span class="giallo-l"><span style="color: #E06C75;">  --radius-large</span><span>:</span><span style="color: #D19A66;"> 1.25</span><span style="color: #E06C75;">rem</span><span>;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h2 id="example-custom-font">Example: custom font</h2>
+<pre class="giallo" style="color: #ABB2BF; background-color: #282C34;"><code data-lang="html"><span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">link</span><span style="color: #D19A66;"> rel</span><span>=</span><span style="color: #98C379;">&quot;preconnect&quot;</span><span style="color: #D19A66;"> href</span><span>=</span><span style="color: #98C379;">&quot;https://fonts.googleapis.com&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">link</span><span style="color: #D19A66;"> href</span><span>=</span><span style="color: #98C379;">&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap&quot;</span><span style="color: #D19A66;"> rel</span><span>=</span><span style="color: #98C379;">&quot;stylesheet&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #E06C75;">style</span><span>&gt;</span></span>
+<span class="giallo-l"><span style="color: #56B6C2;">:root</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #E06C75;">  --font-sans</span><span>:</span><span style="color: #98C379;"> &quot;Inter&quot;</span><span>,</span><span style="color: #D19A66;"> system-ui</span><span>,</span><span style="color: #D19A66;"> sans-serif</span><span>;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"><span>&lt;/</span><span style="color: #E06C75;">style</span><span>&gt;</span></span></code></pre>
+
+    </div>
+  </main>
+</body>
+</html>
