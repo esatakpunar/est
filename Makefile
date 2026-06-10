@@ -33,6 +33,7 @@ css:
 	@cat $(CSS_FILES) > dist/est.css
 	@npx esbuild dist/est.css --minify --outfile=dist/est.min.css
 	@gzip -9 -k -f dist/est.min.css
+	@cp dist/est.min.css docs/static/est.min.css
 	@echo "CSS: $$(wc -c < dist/est.min.css | tr -d ' ') bytes (minified)"
 
 js:
@@ -40,7 +41,11 @@ js:
 	@npx esbuild src/js/index.js --bundle --format=iife --outfile=dist/est.js
 	@npx esbuild src/js/index.js --bundle --format=iife --minify --outfile=dist/est.min.js
 	@gzip -9 -k -f dist/est.min.js
+	@cp dist/est.min.js docs/static/est.min.js
 	@echo "JS: $$(wc -c < dist/est.min.js | tr -d ' ') bytes (minified)"
+
+docs:
+	@cd docs && zola serve
 
 clean:
 	@rm -rf dist

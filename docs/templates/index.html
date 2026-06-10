@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}{{ config.extra.description }}{% endblock %}
+
+{% block content %}
+<section class="intro">
+  <p class="intro-eyebrow">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+    </svg>
+    Zero dependencies
+  </p>
+  <h1>Minimal UI library<br>built for the long term.</h1>
+  <p class="intro-sub">
+    Semantic HTML components with a soft purple accent. No framework. No build step.
+    Just one CSS and one JS file. ~9KB total.
+  </p>
+  <div class="intro-actions">
+    <a href="/components/" class="button">Browse components</a>
+    <a href="/usage/" class="button outline">Get started</a>
+    <span class="intro-code">npm install @esatakpunar/est</span>
+  </div>
+</section>
+
+<section class="features">
+  <article class="feature-card">
+    <div class="feature-icon" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+    </div>
+    <h3>~9KB total</h3>
+    <p>7.1KB CSS + 2.4KB JS, minified and gzipped. Nothing more, nothing less.</p>
+  </article>
+  <article class="feature-card">
+    <div class="feature-icon" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    </div>
+    <h3>Zero dependencies</h3>
+    <p>No Node.js ecosystem. No React, Vue, or any framework. Standalone CSS and vanilla JS.</p>
+  </article>
+  <article class="feature-card">
+    <div class="feature-icon" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+    </div>
+    <h3>Semantic HTML</h3>
+    <p>Native <code>&lt;button&gt;</code>, <code>&lt;dialog&gt;</code>, <code>&lt;details&gt;</code> styled directly. No class soup.</p>
+  </article>
+  <article class="feature-card">
+    <div class="feature-icon" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <h3>Accessible</h3>
+    <p>ARIA roles, keyboard navigation, focus management built in throughout every component.</p>
+  </article>
+  <article class="feature-card">
+    <div class="feature-icon" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+    </div>
+    <h3>Dark mode</h3>
+    <p>Automatic dark mode via <code>prefers-color-scheme</code>. All tokens adapt. Override with one attribute.</p>
+  </article>
+  <article class="feature-card">
+    <div class="feature-icon" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+    </div>
+    <h3>Customizable</h3>
+    <p>Override CSS custom properties to match your brand. No rebuilding, no config files.</p>
+  </article>
+</section>
+
+<section class="why-section">
+  <h2>Why est?</h2>
+  <p>
+    Built from <a href="https://oat.ink" target="_blank" rel="noopener">oat</a> with a different visual language —
+    soft purple accent, Apple HIG-inspired spacing, Notion-style underline tabs, and
+    <code>cubic-bezier(0.25, 0, 0, 1)</code> easing everywhere.
+    Same semantic HTML philosophy, same zero-dependency architecture. Different aesthetic.
+  </p>
+  <p>
+    The goal: a minimal component library that still looks considered.
+    CSS variables for everything, so customization is one line.
+    No build step, no ecosystem lock-in. Include two files and ship.
+  </p>
+</section>
+{% endblock %}
