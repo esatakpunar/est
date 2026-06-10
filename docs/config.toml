@@ -1,4 +1,4 @@
-base_url = "/"
+base_url = "https://esatakpunar.github.io/est"
 title = "est"
 compile_sass = false
 build_search_index = false
